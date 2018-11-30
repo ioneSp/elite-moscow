@@ -1,1 +1,52 @@
-
+.footer{
+    background: #61565A;
+    &__wrap{
+        max-width: 1170px;
+        width: 100%;
+        display: block;
+        margin: auto
+    }
+    &__content , &__column{
+        display: flex;
+    }
+    &__header{
+        line-height: normal;
+        font-size: 14px;
+        color: #FFFFFF;
+    }
+    &__column-content{
+        flex-grow: 1;
+    }
+    &__contacts--item{
+        display: block;
+    }
+    &__contacts--text{
+        line-height: normal;
+        font-size: 18px;
+        color: #FFFFFF;
+    }
+    &__contacts--text-ghost{
+        line-height: normal;
+        font-size: 11px;
+        color: #CCCCCC;
+        opacity: 0.6;
+    }
+    &__contacts--link{
+        line-height: normal;
+        font-size: 12px;
+        text-decoration: dashed;
+        color: #FFFFFF;
+    }
+    &__list-item{
+        display: block;
+    }
+    &__list-item{
+        line-height: 18px;
+        font-size: 12px;
+        color: #CCCCCC;
+        text-decoration: none;
+        &:hover{
+            text-decoration: underline;
+        }
+    }
+}
