@@ -1,14 +1,13 @@
+include ../components/libs/bemto/bemto
+include ../components/libs/jade-injected/jade-injected
+
+include ../components/head/head.pug
+include ../components/header/header
+include ../components/social/social
+include ../components/footer/footer.pug
+
 doctype html
 html(class="no-js", lang="ru")
-
-    include ../components/libs/bemto/bemto
-    include ../components/libs/jade-injected/jade-injected
-
-    include ../components/head/head.pug
-    include ../components/header/header
-    include ../components/social/social
-    include ../components/footer/footer.pug
-
     head
         +head(head.defaults)
     body.page
@@ -33,7 +32,9 @@ html(class="no-js", lang="ru")
             +social({mod:'close'})
             +social({mod:'search-main'})
             +social({mod:'filter'})
-            .page__buffer
+
+            +b.section
+                +e.box
 
         .page__footer
             +footer()
