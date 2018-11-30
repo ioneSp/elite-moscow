@@ -5,18 +5,34 @@ html(class="no-js", lang="ru")
     include ../components/libs/jade-injected/jade-injected
 
     include ../components/head/head.pug
-    include ../components/example/example.pug
+    include ../components/header/header
+    include ../components/social/social
     include ../components/footer/footer.pug
 
     head
         +head(head.defaults)
     body.page
         |%=symbols=%
-
+        +header()
         section.page__wrapper
-
-
-
+            +social({mod:'arrow'})
+            +social({mod:'search'})
+            +social({mod:'basket'})
+            +social({mod:'home'})
+            +social({mod:'user'})
+            +social({mod:'phone'})
+            +social({mod:'burger'})
+            +social({mod:'map'})
+            +social({mod:'phone-two'})
+            +social({mod:'social-vk'})
+            +social({mod:'social-fb'})
+            +social({mod:'social-in'})
+            +social({mod:'social-lin'})
+            +social({mod:'social-yt'})
+            +social({mod:'social-in'})
+            +social({mod:'close'})
+            +social({mod:'search-main'})
+            +social({mod:'filter'})
             .page__buffer
 
         .page__footer

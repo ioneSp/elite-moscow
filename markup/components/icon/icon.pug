@@ -2,8 +2,43 @@ mixin icon(params)
     -
         var name_block = 'icon',
         currentClass = name_block;
-        if('mod' in params && params.mod.length) {
-        currentClass =  name_block+'_'+params.mod;
-        }
+        if('mod' in params && params.mod.length) currentClass =  name_block+'_'+params.mod;
+
     +b.DIV(class= currentClass)
-        
+        case params.mod
+            when 'arrow'
+                i(class="large "+params.mod+" icon large_"+params.mod)
+            when 'search'
+                i(class="large "+params.mod+" icon large_"+params.mod)
+            when 'basket'
+                i(class="large "+params.mod+" icon large_"+params.mod)
+            when 'home'
+                i(class="large "+params.mod+" icon large_"+params.mod)
+            when 'user'
+                i(class="large "+params.mod+" icon large_"+params.mod)
+            when 'phone'
+                i(class="large "+params.mod+" icon large_"+params.mod)
+            when 'burger'
+                i(class="large "+params.mod+" icon large_"+params.mod)
+            when 'map'
+                i(class="large "+params.mod+" icon large_"+params.mod)
+            when 'phone-two'
+                i(class="large "+params.mod+" icon large_"+params.mod)
+            when 'social-vk'
+                i(class="large "+params.mod+" icon large_"+params.mod)
+            when 'social-fb'
+                i(class="large "+params.mod+" icon large_"+params.mod)
+            when 'social-in'
+                i(class="large "+params.mod+" icon large_"+params.mod)
+            when 'social-lin'
+                i(class="large "+params.mod+" icon large_"+params.mod)
+            when 'social-yt'
+                i(class="large "+params.mod+" icon large_"+params.mod)
+            when 'social-in'
+                i(class="large "+params.mod+" icon large_"+params.mod)
+            when 'close'
+                i(class="large "+params.mod+" icon large_"+params.mod)
+            when 'search-main'
+                i(class="large "+params.mod+" icon large_"+params.mod)
+            when 'filter'
+                i(class="large "+params.mod+" icon large_"+params.mod)
