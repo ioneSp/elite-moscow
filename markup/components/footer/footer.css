@@ -15,15 +15,28 @@
   line-height: normal;
   font-size: 14px;
   color: #FFFFFF;
+  margin-bottom: 12px;
 }
 .footer__column-content {
   flex-grow: 1;
 }
+.footer__content {
+  padding-top: 37px;
+}
 .footer__contacts--item {
   display: block;
+  margin-bottom: 19px;
+}
+.footer__contacts--item .icon {
+  width: 14px;
+  height: 14px;
+  background: #000d;
+  display: inline-block;
+  border-radius: 50px;
 }
 .footer__contacts--text {
-  line-height: normal;
+  margin-left: 13px;
+  line-height: 28px;
   font-size: 18px;
   color: #FFFFFF;
 }
@@ -31,16 +44,34 @@
   line-height: normal;
   font-size: 11px;
   color: #CCCCCC;
+  display: block;
+  margin-left: 30px;
   opacity: 0.6;
 }
 .footer__contacts--link {
   line-height: normal;
+  position: relative;
   font-size: 12px;
-  text-decoration: dashed;
   color: #FFFFFF;
+  margin-left: 12px;
+}
+.footer__contacts--link:after {
+  content: '';
+  width: 100%;
+  left: 0;
+  right: 0;
+  bottom: -5px;
+  border-width: 1px;
+  border-color: #fff;
+  border-style: dashed;
+  position: absolute;
 }
 .footer__list-item {
   display: block;
+  margin-bottom: 5px;
+}
+.footer__column {
+  width: 80%;
 }
 .footer__list-item {
   line-height: 18px;

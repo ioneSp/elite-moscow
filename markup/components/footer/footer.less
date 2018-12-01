@@ -13,15 +13,28 @@
         line-height: normal;
         font-size: 14px;
         color: #FFFFFF;
+        margin-bottom: 12px;
     }
     &__column-content{
         flex-grow: 1;
     }
+    &__content{
+        padding-top: 37px;
+    }
     &__contacts--item{
         display: block;
+        margin-bottom: 19px;
+        .icon{
+            width: 14px;
+            height: 14px;
+            background: #000d;
+            display: inline-block;
+            border-radius: 50px;
+        }
     }
     &__contacts--text{
-        line-height: normal;
+        margin-left: 13px;
+        line-height: 28px;
         font-size: 18px;
         color: #FFFFFF;
     }
@@ -29,16 +42,35 @@
         line-height: normal;
         font-size: 11px;
         color: #CCCCCC;
+        display: block;
+        margin-left: 30px;
         opacity: 0.6;
     }
     &__contacts--link{
         line-height: normal;
+        position: relative;
         font-size: 12px;
-        text-decoration: dashed;
         color: #FFFFFF;
+        margin-left: 12px;
+        &:after{
+            content: '';
+            width: 100%;
+            left: 0;
+            right: 0;
+            bottom: -5px;
+            border-width: 1px;
+            border-color: #fff;
+            border-style: dashed;
+            position: absolute;
+
+        }
     }
     &__list-item{
         display: block;
+        margin-bottom: 5px;
+    }
+    &__column{
+        width: 80%;
     }
     &__list-item{
         line-height: 18px;
