@@ -1,8 +1,21 @@
 .section {
-  &__box {
-    width: 100%;
-    max-width: 1170px;
-    margin: 0 auto;
-
-  }
+    &__box {
+      width: 100%;
+      max-width: 1200px;
+      padding-left: 15px;
+      padding-right: 15px;
+      margin: 0 auto;
+      @media (max-width: @desktop) {
+        max-width: 1024px;
+      }
+      @media (max-width:  @small-desktop) {
+        max-width: 768px;
+      }
+      @media (max-width:  @big-phone) {
+        max-width: 640px;
+      }
+      @media (max-width:  @phone) {
+        max-width: 320px;
+      }
+    }
 }
