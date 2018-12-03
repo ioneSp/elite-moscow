@@ -2,10 +2,9 @@ mixin icon(params)
     -
         var name_block = 'icon',
         currentClass = name_block;
-        if('type' in params && params.type.length) currentClass =  name_block+'_'+params.type;
-        if('size' in params && params.size.length) currentClass +=  ' '+params.size;
-        if('semantic' in params && params.semantic.length) currentClass +=  ' '+params.semantic;
-
+        if(params != undefined && 'mod' in params && params.mod.length) currentClass =  name_block+'_'+params.mod;
+        if(params != undefined && 'size' in params && params.size.length) currentClass +=  ' '+params.size;
+        if(params != undefined && 'semantic' in params && params.semantic.length) currentClass +=  ' '+params.semantic;
     +b.I(class= currentClass)
     -
         /*case params.mod
