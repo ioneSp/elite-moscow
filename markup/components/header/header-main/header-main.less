@@ -1,16 +1,30 @@
 .header-main {
-  color: @color-green;
-  @media (max-width: @desktop) {
-    &__box {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-    &__left {}
-    &__center {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
+  background: url("../img/assets/header/bg.jpg") center / cover no-repeat;
+  &__box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__left {
+
+  }
+  &__center {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__right {
+
+  }
+  &__logo {
+    position: relative;
+    height: 90px;
+    width: 140px;
+    img {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%,-50%);
     }
   }
 }
