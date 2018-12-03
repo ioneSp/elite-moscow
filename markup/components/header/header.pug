@@ -1,19 +1,11 @@
+include header-top/header-top
+include header-main/header-main
+include header-bottom/header-bottom
 mixin header
     +b.header
         +e.top
-
+            +header-top()
         +e.main
-            +e.main-left
-                +e.phone
-                    +icon()
-                    +e.phone-number 8 (495) 783-97-33
-                    +e.phone-description Часы работы 10:00 21:00 МСК
-            +e.main-center
-                +e.logo
-
-            +e.main-right
-                +e.phone
-                    +icon()
-                    +e.phone-number 8 (495) 783-97-33
-                    +e.phone-description Часы работы 10:00 21:00 МСК
-        +e.bootom
+            +header-main()
+        +e.bottom
+            +header-bottom()
