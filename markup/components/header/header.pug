@@ -1,2 +1,19 @@
-mixin header(data)
-    .header
+mixin header
+    +b.header
+        +e.top
+
+        +e.main
+            +e.main-left
+                +e.phone
+                    +icon()
+                    +e.phone-number 8 (495) 783-97-33
+                    +e.phone-description Часы работы 10:00 21:00 МСК
+            +e.main-center
+                +e.logo
+
+            +e.main-right
+                +e.phone
+                    +icon()
+                    +e.phone-number 8 (495) 783-97-33
+                    +e.phone-description Часы работы 10:00 21:00 МСК
+        +e.bootom

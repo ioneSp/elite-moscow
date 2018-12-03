@@ -1,2 +1,12 @@
-mixin button(data)
-    .button
+mixin button(params)
+    -
+        var name_block = 'button',
+        currentClass = name_block;
+        if('mod' in params && params.mod.length) currentClass += '_'+params.mod;
+        if(!('tag' in params)) params.tag = 'button';
+    if(!(params.tag && params.tag === 'link'))
+        +b.BUTTON(class= currentClass)
+            +e.SPAN.text= params.text
+    else
+        +b.A(class= currentClass)
+            +e.SPAN.text= params.text

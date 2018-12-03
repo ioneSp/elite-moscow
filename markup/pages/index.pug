@@ -19,57 +19,79 @@ html(class="no-js", lang="ru")
         | %=symbols=%
         +header()
         +slider({
-            type: ''
+            type: 'main'
         })
         +b.section
             +e.box
                 +block-container({
-                    title: 'Популярные Бренды',
+                    title: 'Итальянская мебель',
                     headerButtons: [
                         {
-                            name: 'Все стили',
+                            text: 'Все стили',
                             link: '#'
                         },
                         {
-                            name: 'Классика',
+                            text: 'Классика',
                             link: '#'
                         },
                         {
-                            name: 'Современный',
+                            text: 'Современный',
                             link: '#'
                         }
                     ]
                 })
-        +slider({
-            type: 'main',
-            elements: []
-        })
+        +b.section
+            +e.box
+                +block-container({
+                    title: 'Специальное предложение'
+                })
+                    +slider({
+                        type: 'card',
+                        elements: []
+                    })
+        +b.section
+            +e.box
+                +block-container({
+                    title: 'Популярные модели',
+                    headerLink: {name: 'Смотреть все',href: '/'}
+                })
+                    +slider({
+                        type: 'card',
+                        elements: []
+                    })
+        +b.section
+            +e.box
+                +block-container({
+                    title: 'Популярные бренды',
+                    headerLink: {name: 'Смотреть все', href: '/'}
+                })
+                    +slider({
+                        type: 'brand',
+                        elements: []
+                    })
+        +b.section
+            +e.box
+                +icon({type: 'arrow',semantic: 'arrow'})
+                +icon({type: 'search',semantic: 'search'})
+                +icon({type: 'basket',semantic: 'basket'})
+                +icon({type: 'home',semantic: 'home'})
+                +icon({type: 'user',semantic: 'user'})
+                +icon({type: 'phone',semantic: 'phone'})
+                +icon({type: 'burger',semantic: 'burger'})
+                +icon({type: 'map',semantic: 'map'})
+                +icon({type: 'phone-two'})
+                +icon({type: 'social_vk'})
+                +icon({type: 'social_fb'})
+                +icon({type: 'social_lin'})
+                +icon({type: 'social_yt'})
+                +icon({type: 'social_in'})
+                +icon({type: 'close'})
+                +icon({type: 'search-main'})
+                +icon({type: 'filter'})
 
-        section.page__wrapper
-            +icon({mod: 'arrow'})
-            +icon({mod: 'search'})
-            +icon({mod: 'basket'})
-            +icon({mod: 'home'})
-            +icon({mod: 'user'})
-            +icon({mod: 'phone'})
-            +icon({mod: 'burger'})
-            +icon({mod: 'map'})
-            +icon({mod: 'phone-two'})
-            +icon({mod: 'social-vk'})
-            +icon({mod: 'social-fb'})
-            +icon({mod: 'social-in'})
-            +icon({mod: 'social-lin'})
-            +icon({mod: 'social-yt'})
-            +icon({mod: 'social-in'})
-            +icon({mod: 'close'})
-            +icon({mod: 'search-main'})
-            +icon({mod: 'filter'})
-
-            +b.section
-                +e.box
-
-        .page__footer
-            +footer()
+        +b.section
+            +e.box
+        +footer()
 
         script(src='%=static=%js/separate-js/svg4everybody.min.js')
         script svg4everybody();
