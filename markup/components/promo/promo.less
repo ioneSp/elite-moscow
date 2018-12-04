@@ -3,6 +3,10 @@
         line-height: 36px;
         font-size: 24px;
         color: #434343;
+        @media (max-width:  639px) {
+            font-size: 18px;
+            line-height: normal
+        }
     }
     
     &__info--number{
@@ -34,6 +38,104 @@
         }
     }
     &_type{
+        &_offer{
+            height: 498px;
+            width: 1170px;
+            display: block;
+            margin: auto;
+            border: 10px solid #4343430d;
+            box-sizing: border-box;
+            background: #fff;
+            border-radius: 4px;
+            margin-bottom: 95px;
+            @media (max-width: 1199px) {
+                width: 1024px;;
+            }
+            @media (max-width:  1023px) {
+                width: 100%;
+                border: 10px solid #4343430d;
+                height: 445px;
+            }
+            @media (max-width:  639px) {
+                border-width: 10px;
+                .col-xs-6{
+                    width: 100%;
+                    flex-basis: 100%;
+                    max-width: 100%;
+                }
+            }
+            .col-md-6{
+                padding: 0;
+                background-size: cover;
+                @media (max-width:  1023px) {
+                    height: 100%;
+                    display: block;
+                    width: 100%;
+                }
+            }
+            @media (max-width:  1023px) {
+            .promo__col--mobile{
+                position: absolute;
+                background: #fff;
+                left: 75px;
+           
+                right: 75px;
+                top: 75px;
+                bottom: 75px;
+                height: auto;
+                width: auto;
+            }
+            
+            }
+            @media (max-width:  639px) {
+                .promo__col--mobile{
+                    top: 0;
+                    right: 0;
+                    left: 0;
+                    bottom: 0;
+                }
+            }
+            .promo__button{
+                width: 236px;
+                height: 32px ;
+                display: block;
+                margin: auto;
+                margin-top: 45px;
+                .button__text{
+                    line-height: 32px;
+                }
+            }
+            .promo__header{
+                text-transform: uppercase;
+                text-align: center;
+            }
+            .promo__container{
+                max-width: 70%;
+                display: block;
+                margin: auto;
+            }
+            .promo__description{
+                line-height: 21px;
+                font-size: 14px;
+                text-align: center;
+                margin-top: 32px;
+                color: #434343;
+                @media (max-width:  639px) {
+                    text-align: left;
+                }
+            }
+            .row   {
+                height: 100%;
+                margin: 0;
+                position: relative;
+            }
+            .promo__col{
+                height: 100%;
+                display: flex;
+                align-items: center;
+                flex-wrap: wrap;
+            }
+        }
         &_order{
             height: 351px;
             background: #ccc;

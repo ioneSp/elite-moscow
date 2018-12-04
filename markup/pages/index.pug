@@ -174,9 +174,24 @@ html(class="no-js", lang="ru")
                 +icon({type: 'close'})
                 +icon({type: 'search-main'})
                 +icon({type: 'filter'})
-
-        +b.section
-            +e.box
+        +b.promo._type_offer
+            .row
+                .col-md-6.promo__col--mobile
+                    .promo__col
+                        .promo__container
+                            +e.header 
+                                | Закажите дизайн 
+                                br
+                                | интерьера под ключ
+                            .row
+                                .col-xs-6
+                                    +e.description  Помощь в подборке мебели и предметов интерьера. 
+                                .col-xs-6
+                                    +e.description  От интерьеров среднего уровня, до интерьеров класса LUXURY.
+                            +e.button
+                                +b.A.button._theme_light(href="#")
+                                    +e.text ПОЛУЧИТЬ ПРЕДЛОЖЕНИЕ
+                .col-md-6(style="background-image: url(/static/img/assets/promo/promo_type_offer.png)")
         +b.promo._type_order.section(style="background-image: url(/static/img/assets/promo/promo_type_order.jpg)")
             .section__box
                 +e.content

@@ -3,6 +3,12 @@
   font-size: 24px;
   color: #434343;
 }
+@media (max-width: 639px) {
+  .promo__header {
+    font-size: 18px;
+    line-height: normal;
+  }
+}
 .promo__info--number {
   line-height: 74px;
   font-size: 50px;
@@ -27,6 +33,112 @@
   font-size: 16px;
   text-transform: uppercase;
   color: #434343;
+}
+.promo_type_offer {
+  height: 498px;
+  width: 1170px;
+  display: block;
+  margin: auto;
+  border: 10px solid #4343430d;
+  box-sizing: border-box;
+  background: #fff;
+  border-radius: 4px;
+  margin-bottom: 95px;
+}
+@media (max-width: 1199px) {
+  .promo_type_offer {
+    width: 1024px;
+  }
+}
+@media (max-width: 1023px) {
+  .promo_type_offer {
+    width: 100%;
+    border: 10px solid #4343430d;
+    height: 445px;
+  }
+}
+@media (max-width: 639px) {
+  .promo_type_offer {
+    border-width: 10px;
+  }
+  .promo_type_offer .col-xs-6 {
+    width: 100%;
+    flex-basis: 100%;
+    max-width: 100%;
+  }
+}
+.promo_type_offer .col-md-6 {
+  padding: 0;
+  background-size: cover;
+}
+@media (max-width: 1023px) {
+  .promo_type_offer .col-md-6 {
+    height: 100%;
+    display: block;
+    width: 100%;
+  }
+}
+@media (max-width: 1023px) {
+  .promo_type_offer .promo__col--mobile {
+    position: absolute;
+    background: #fff;
+    left: 75px;
+    right: 75px;
+    top: 75px;
+    bottom: 75px;
+    height: auto;
+    width: auto;
+  }
+}
+@media (max-width: 639px) {
+  .promo_type_offer .promo__col--mobile {
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+  }
+}
+.promo_type_offer .promo__button {
+  width: 236px;
+  height: 32px ;
+  display: block;
+  margin: auto;
+  margin-top: 45px;
+}
+.promo_type_offer .promo__button .button__text {
+  line-height: 32px;
+}
+.promo_type_offer .promo__header {
+  text-transform: uppercase;
+  text-align: center;
+}
+.promo_type_offer .promo__container {
+  max-width: 70%;
+  display: block;
+  margin: auto;
+}
+.promo_type_offer .promo__description {
+  line-height: 21px;
+  font-size: 14px;
+  text-align: center;
+  margin-top: 32px;
+  color: #434343;
+}
+@media (max-width: 639px) {
+  .promo_type_offer .promo__description {
+    text-align: left;
+  }
+}
+.promo_type_offer .row {
+  height: 100%;
+  margin: 0;
+  position: relative;
+}
+.promo_type_offer .promo__col {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
 }
 .promo_type_order {
   height: 351px;
