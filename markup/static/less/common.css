@@ -21,3 +21,6 @@
   background: #ccc;
   color: #fff;
 }
+.header {
+  display: none;
+}

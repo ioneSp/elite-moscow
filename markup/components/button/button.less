@@ -1,1 +1,36 @@
+.button{
+    display: block;
+    height: 100%;
+    width: 100%;
+    &_theme{
+        &_default{
 
+        }
+        &_gray{
+
+        }
+        &_light{
+            border-radius: 4px;
+            border-radius: 30px;
+            border: 1px solid #A39134;
+            box-sizing: border-box;
+            text-align: center;
+            transition: all .2s;
+            .button__text{
+                line-height: normal;
+                text-align: center;
+                font-size: 12px;
+                width: 100%;
+                height: 100%;
+                text-align: center;
+                color: #434343;
+            }
+            &:hover{
+                background: #bca153;
+                .button__text{
+                    color: #fff;
+                }
+            }
+        }
+    }
+}
