@@ -1,13 +1,19 @@
 mixin header-top
     +b.header-top
         +e.box.section__box
-            .ui.secondary.tiny.menu
-                a.item.text.fs-14(href='/')
-                    i.home.icon.mb-2(style='margin: 0')
-                a.item(href='/info/salon-italyanskoy-mebeli/') &Ocy; &kcy;&ocy;&mcy;&pcy;&acy;&ncy;&icy;&icy;
-                a.item(href='/info/delivery/') &Dcy;&ocy;&scy;&tcy;&acy;&vcy;&kcy;&acy; &icy; &ocy;&pcy;&lcy;&acy;&tcy;&acy;
-                a.item(href='/info/articles/') &Scy;&tcy;&acy;&tcy;&softcy;&icy;
-                a.item.wt(href='/info/contacts/') &Kcy;&ocy;&ncy;&tcy;&acy;&kcy;&tcy;&ycy;
-                a.right.item.lang.translate(href='#', data-lang='en') EN
-                a.item.lang.translate(href='#', data-lang='it') IT
-                a.item.translate.wt(href='#', data-lang='ru') RU
+            +e.left
+                .ui.secondary.tiny.menu
+                    a.item.text.fs-14(href='/')
+                        +icon({semantic: 'home'})
+                    a.item(href='') О компании
+                    a.item(href='') Доставка и оплата
+                    a.item(href='') Статьи
+                    a.item.wt(href='') Контакты
+            +e.right
+                .ui.secondary.tiny.menu
+                    a.right.item.translate(href='#', data-lang='en')
+                        +icon({semantic: 'user'})
+                        | Личный кабинет
+                    a.right.item.lang.translate(href='#', data-lang='en') EN
+                    a.item.lang.translate(href='#', data-lang='it') IT
+                    a.item.translate.wt(href='#', data-lang='ru') RU

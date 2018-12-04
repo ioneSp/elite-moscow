@@ -1,0 +1,16 @@
+include ../card/card
+include ../brand-card/brand-card
+mixin slider(params)
+    -
+        var name_block = 'slider',
+        currentClass = name_block;
+        if('mod' in params && params.mod.length) currentClass = name_block+'_'+params.mod;
+    +b.DIV(class= currentClass)
+        if(params.elements)
+            +e.list
+                each item in params.elements
+                    case params.type
+                        when 'brand'
+                            +brand-card()
+                        when 'card'
+                            +card()

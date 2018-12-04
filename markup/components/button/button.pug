@@ -2,7 +2,8 @@ mixin button(params)
     -
         var name_block = 'button',
         currentClass = name_block;
-        if('mod' in params && params.mod.length) currentClass += '_'+params.mod;
+        if('mod' in params && params.mod.length) currentClass += '_mod_'+params.mod;
+        if('theme' in params && params.theme.length) currentClass += ' '+name_block+'_theme_'+params.theme;
         if(!('tag' in params)) params.tag = 'button';
     if(!(params.tag && params.tag === 'link'))
         +b.BUTTON(class= currentClass)

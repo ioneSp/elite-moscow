@@ -1,0 +1,20 @@
+include ../button/button
+mixin card(params)
+    +b.card
+        +e.box
+            +e.label_red Акция - 56%
+            +e.view
+                +e.IMG.image(src="/static/img/assets/card/product.jpg" alt="")
+                +e.OL.stars
+                    +e.LI.star_active
+                    +e.LI.star_active
+                    +e.LI.star_active
+                    +e.LI.star_active
+                    +e.LI.star_active
+            +e.info
+                +e.vendor-code Композиция: 133-072
+                +e.title Журнальные столики и пуфы коллекции Philipp фабрики Selva
+                +e.price от 234 567 ₽
+                +e.btn
+                    +button({theme: 'light', mod: 'card', text: 'В корзину'})
+                +e.availability В наличии
