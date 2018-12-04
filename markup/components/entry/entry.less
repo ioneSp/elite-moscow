@@ -1,17 +1,19 @@
 .entry{
+    &__info{
+        display: block;
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 25px;
+        padding-left: 22px;
+    }
     &__item{
         border-radius: 4px;
         background: #ccc;
         height: 221px;
         position: relative;
         display: block;
-        &__info{
-            display: block;
-            position: absolute;
-            left: 0;
-            right: 0;
-            bottom: 0;
-        }
+        cursor: pointer;
         &:before{
             content: '';
             position: absolute;
@@ -37,5 +39,9 @@
         letter-spacing: -0.03em;
         display: block;
         color: #FFFFFF;
+        margin-top: 20px;
     }
+}
+.box-row {
+    margin-bottom: 1rem;
 }
