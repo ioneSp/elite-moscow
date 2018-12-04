@@ -1,20 +1,42 @@
 .header-main {
-  background: url("../img/assets/header/bg.jpg") center / cover no-repeat;
+  background: url("../img/assets/header/header-main/bg.jpg") center top / cover no-repeat;
+  height: 120px;
   &__box {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    height: 120px;
   }
   &__left {
-
+    margin-left: 8.6%;
+    margin-top: 5px;
   }
   &__center {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    .header__icon-box {
+      &_search {
+        margin-left: -98px;
+      }
+      &_cart {
+        margin-right: -98px;
+      }
+      margin-top: -5px;
+      position: absolute;
+    }
+    .header__icon-name {
+      display: inline-block;
+      margin-bottom: 5px;
+      font-size: 15px;
+    }
+    .header__icon {
+      font-size: 30px;
+    }
   }
   &__right {
-
+    margin-right: 8.6%;
+    margin-top: 5px;
   }
   &__logo {
     position: relative;
@@ -22,8 +44,8 @@
     width: 140px;
     img {
       position: absolute;
-      top: 50%;
-      left: 50%;
+      top: 52%;
+      left: 53%;
       transform: translate(-50%,-50%);
     }
   }

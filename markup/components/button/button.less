@@ -1,1 +1,30 @@
-
+.button {
+  outline: none;
+  border: none;
+  background: transparent;
+  display: inline-block;
+  box-shadow: none;
+  &:before {
+    content: '';
+    display: inline-block;
+    height: 100%;
+    width: 1px;
+    margin-right: -1px;
+    vertical-align: middle;
+    text-align: center;
+  }
+  &__text {
+    display: inline-block;
+    vertical-align: middle;
+    font: inherit;
+    color: inherit;
+  }
+  &_cart {
+    min-width: 160px;
+    height: 32px;
+    border-radius: 40px;
+    border: 1px solid #BFA96A;
+    text-transform: uppercase;
+    font-size: 13px;
+  }
+}
