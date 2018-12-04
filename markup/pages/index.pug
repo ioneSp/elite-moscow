@@ -1,0 +1,234 @@
+include ../components/libs/bemto/bemto
+include ../components/libs/jade-injected/jade-injected
+
+include ../components/head/head.pug
+include ../components/header/header
+include ../components/icon/icon
+include ../components/social/social
+include ../components/slider/slider
+include ../components/block-container/block-container
+include ../components/footer/footer.pug
+
+doctype html
+html(class="no-js", lang="ru")
+    head
+        +head({
+            title: 'Интернет магазин Итальянской мебели в Москве'
+        })
+    body.page
+        | %=symbols=%
+        +header()
+        +slider({
+            type: 'main'
+        })
+        +b.section
+            +e.box
+                +block-container({
+                    title: 'Итальянская мебель',
+                    headerButtons: [
+                        {
+                            text: 'Все стили',
+                            link: '#'
+                        },
+                        {
+                            text: 'Классика',
+                            link: '#'
+                        },
+                        {
+                            text: 'Современный',
+                            link: '#'
+                        }
+                    ]
+                })
+                    +b.grid-categories
+                        .grid-categories__col.grid-categories__col_size--1 
+                            a.grid-categories__item(href="#" style="background-image: url(/static/img/assets/grid-categories/assets/1.jpg);")
+                                .grid-categories__label Гостиные
+                        .grid-categories__col.grid-categories__col_size--1 
+                            a.grid-categories__item(href="#" style="background-image: url(/static/img/assets/grid-categories/assets/2.jpg);")
+                                .grid-categories__label Спальни
+                        .grid-categories__col.grid-categories__col_size--1 
+                            a.grid-categories__item(href="#" style="background-image: url(/static/img/assets/grid-categories/assets/3.jpg);")
+                                .grid-categories__label Мягкая мебель
+                        .grid-categories__col.grid-categories__col_size--2 
+                            a.grid-categories__item(href="#" style="background-image: url(/static/img/assets/grid-categories/assets/4.jpg);")
+                                .grid-categories__label Кухни
+                
+                        .grid-categories__col.grid-categories__col_size--2 
+                            a.grid-categories__item(href="#" style="background-image: url(/static/img/assets/grid-categories/assets/5.jpg);")
+                                .grid-categories__label Детская мебель
+                        .grid-categories__col.grid-categories__col_size--1 
+                            a.grid-categories__item(href="#" style="background-image: url(/static/img/assets/grid-categories/assets/6.jpg);")
+                                .grid-categories__label Предметы интерьера
+                        .grid-categories__col.grid-categories__col_size--2 
+                            a.grid-categories__item(href="#" style="background-image: url(/static/img/assets/grid-categories/assets/7.jpg);")
+                                .grid-categories__label Офисная мебель
+                    
+                        .grid-categories__col.grid-categories__col_size--1 
+                            a.grid-categories__item(href="#" style="background-image: url(/static/img/assets/grid-categories/assets/8.png);")
+                                .grid-categories__label Кабинеты
+                        .grid-categories__col.grid-categories__col_size--2 
+                            a.grid-categories__item(href="#" style="background-image: url(/static/img/assets/grid-categories/assets/9.jpg);")
+                                .grid-categories__label Проектная мебель
+                        .grid-categories__col.grid-categories__col_size--1 
+                            a.grid-categories__item(href="#" style="background-image: url(/static/img/assets/grid-categories/assets/10.jpg);")
+                                .grid-categories__label Ванные комнаты
+                        .grid-categories__col.grid-categories__col_size--1 
+                            a.grid-categories__item(href="#" style="background-image: url(/static/img/assets/grid-categories/assets/11.jpg);")
+                                .grid-categories__label Межкомнатные  двери
+                    
+                        .grid-categories__col.grid-categories__col_size--1 
+                            a.grid-categories__item(href="#" style="background-image: url(/static/img/assets/grid-categories/assets/12.jpg);")
+                                .grid-categories__label Прихожие
+                        .grid-categories__col.grid-categories__col_size--1 
+                            a.grid-categories__item(href="#" style="background-image: url(/static/img/assets/grid-categories/assets/13.jpg);")
+                                .grid-categories__label Стенки ТВ и стеллажи
+                        .grid-categories__col.grid-categories__col_size--2 
+                            a.grid-categories__item(href="#" style="background-image: url(/static/img/assets/grid-categories/assets/14.jpg);")
+                                .grid-categories__label Столы и стулья
+                        .grid-categories__col.grid-categories__col_size--1 
+                            a.grid-categories__item(href="#" style="background-image: url(/static/img/assets/grid-categories/assets/15.jpg);")
+                                .grid-categories__label Шкафы и гардеробы
+        +b.promo._type_main.section(style="background-image: url(/static/img/assets/promo/promo_type_main.png)")
+                .section__box
+                    +b.row
+                        .col-xs-12.col-md-6
+                            .promo__content
+                                .promo__header
+                                    .promo__title МЕБЕЛЬ ИЗ ИТАЛИИ — ЛУЧШИЙ ВЫБОР В СОЗДАНИИ СОВРЕМЕННОГО ИНТЕРЬЕРА
+                                .promo__description
+                                    p   Вот уже много веков Италия является крупнейшим в мире производителем элитной мебели, лидером сегмента мебели премиум-класса, родоначальником различных направлений мебельного искусства, законодателем моды и инновационного дизайна. 
+                                    p.more(id="more")   Вот уже много веков Италия является крупнейшим в мире производителем элитной мебели, лидером сегмента мебели премиум-класса, родоначальником различных направлений мебельного искусства, законодателем моды и инновационного дизайна. 
+                                    a.read-more(href="more").link.read-more Читать полностью
+                            .promo__info
+                                .promo__info--cell
+                                    .promo__info--number 
+                                        span.spincrement 280
+                                        span +
+                                    .promo__info--text  
+                                        | мебельных 
+                                        br
+                                        | брендов
+                                .promo__info--cell
+                                    .promo__info--number 10
+                                    .promo__info--text  
+                                    
+                                        | лет на рынке 
+                                        br
+                                        | мебели
+                                .promo__info--cell
+                                    .promo__info--text 
+                                        | ДОСТАВКА 
+                                        br
+                                        | ПО ВСЕЙ 
+                                        br 
+                                        | РОСИИ И
+                                        br
+                                        | СТРАНАМ СНГ
+        +b.section
+            +e.box
+                +block-container({
+                    title: 'Специальное предложение'
+                })
+                    +slider({
+                        type: 'card',
+                        elements: []
+                    })
+                    
+        +b.section
+            +e.box
+                +block-container({
+                    title: 'Популярные модели',
+                    headerLink: {name: 'Смотреть все',href: '/'}
+                })
+                    +slider({
+                        type: 'card',
+                        elements: []
+                    })
+        +b.section
+            +e.box
+                +block-container({
+                    title: 'Популярные бренды',
+                    headerLink: {name: 'Смотреть все', href: '/'}
+                })
+                    +slider({
+                        type: 'brand',
+                        elements: []
+                    })
+        +b.section
+            +e.box
+                +icon({type: 'arrow',semantic: 'arrow'})
+                +icon({type: 'search',semantic: 'search'})
+                +icon({type: 'basket',semantic: 'basket'})
+                +icon({type: 'home',semantic: 'home'})
+                +icon({type: 'user',semantic: 'user'})
+                +icon({type: 'phone',semantic: 'phone'})
+                +icon({type: 'burger',semantic: 'burger'})
+                +icon({type: 'map',semantic: 'map'})
+                +icon({type: 'phone-two'})
+                +icon({type: 'social_vk'})
+                +icon({type: 'social_fb'})
+                +icon({type: 'social_lin'})
+                +icon({type: 'social_yt'})
+                +icon({type: 'social_in'})
+                +icon({type: 'close'})
+                +icon({type: 'search-main'})
+                +icon({type: 'filter'})
+        +b.section
+            +e.box
+                +block-container({
+                    title: 'Новости',
+                    headerLink: {name: 'Смотреть все', href: '/'}
+                })
+                    +b.entry
+                        .row
+                            .col-md-4 
+                                +e.A.item(style="background-image: url()")
+                                    +e.info
+                                        +e.item--date 10.10.2016
+                                        +e.item--name Выбираем мебель для зоны отдыха в гостинной
+                            .col-md-4
+                                +e.A.item(style="background-image: url()")
+                                    +e.info
+                                        +e.item--date 10.10.2016
+                                        +e.item--name Выбираем мебель для зоны отдыха в гостинной
+                            .col-md-4
+                                +e.A.item(style="background-image: url()")
+                                    +e.info
+                                        +e.item--date 10.10.2016
+                                        +e.item--name Выбираем мебель для зоны отдыха в гостинной
+
+
+        +b.promo._type_offer
+            .row
+                .col-md-6.promo__col--mobile
+                    .promo__col
+                        .promo__container
+                            +e.header 
+                                | Закажите дизайн 
+                                br
+                                | интерьера под ключ
+                            .row
+                                .col-xs-6
+                                    +e.description  Помощь в подборке мебели и предметов интерьера. 
+                                .col-xs-6
+                                    +e.description  От интерьеров среднего уровня, до интерьеров класса LUXURY.
+                            +e.button
+                                +b.A.button._theme_light(href="#")
+                                    +e.text ПОЛУЧИТЬ ПРЕДЛОЖЕНИЕ
+                .col-md-6(style="background-image: url(/static/img/assets/promo/promo_type_offer.png)")
+        +b.promo._type_order.section(style="background-image: url(/static/img/assets/promo/promo_type_order.jpg)")
+            .section__box
+                +e.content
+                    +e.header ИЩИТЕ ЛУЧШУЮ СТОИМОСТЬ?
+                    +e.description Напишите  нам название интересующего Вас товара. Сравните цены. Получите самое выгодное предложение
+                    +e.button
+                        +b.A.button._theme_light(href="#")
+                            +e.text ПОЛУЧИТЬ ПРЕДЛОЖЕНИЕ
+        +footer()
+
+        script(src='%=static=%js/separate-js/svg4everybody.min.js')
+        script svg4everybody();
+
+        //- Main scripts. You can replace it, but I recommend you to leave it here
+        script(src='%=static=%js/main%=hash=%%=min=%.js')

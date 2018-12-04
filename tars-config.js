@@ -15,7 +15,7 @@ module.exports = {
     "js": {
         "workflow": "concat",
         "bundler": "webpack",
-        "lint": true,
+        "lint": false,
         "useBabel": false,
         "removeConsoleLog": true,
         "webpack": {
@@ -38,7 +38,7 @@ module.exports = {
         }
     },
     "notifyConfig": {
-        "useNotify": true,
+        "useNotify": false,
         "title": "TARS notification",
         "sounds": {},
         "taskFinishedText": "Task finished at: "

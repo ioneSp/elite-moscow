@@ -1,0 +1,38 @@
+.entry__item {
+  border-radius: 4px;
+  background: #ccc;
+  height: 221px;
+  position: relative;
+  display: block;
+}
+.entry__item__info {
+  display: block;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+.entry__item:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  opacity: 0.6;
+  background: linear-gradient(180deg, #ffffff 0%, #000000 100%);
+}
+.entry__item--date {
+  line-height: normal;
+  font-size: 13px;
+  display: block;
+  color: #FFFFFF;
+  opacity: 0.6;
+}
+.entry__item--name {
+  line-height: 17px;
+  font-size: 14px;
+  letter-spacing: -0.03em;
+  display: block;
+  color: #FFFFFF;
+}

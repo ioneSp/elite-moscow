@@ -1,0 +1,27 @@
+.section__box {
+  width: 100%;
+  max-width: 1200px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin: 0 auto;
+}
+@media (max-width: 1199px) {
+  .section__box {
+    max-width: 1024px;
+  }
+}
+@media (max-width: 1023px) {
+  .section__box {
+    max-width: 768px;
+  }
+}
+@media (max-width: 767px) {
+  .section__box {
+    max-width: 640px;
+  }
+}
+@media (max-width: 639px) {
+  .section__box {
+    max-width: 100%;
+  }
+}

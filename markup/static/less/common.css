@@ -1,0 +1,26 @@
+.page {
+  font-family: 'HelveticaNeueCyr', Arial, sans-serif;
+}
+.page__wrapper {
+  min-height: 100%;
+  margin-bottom: -50px;
+}
+* html .page__wrapper {
+  height: 100%;
+}
+.page__buffer {
+  height: 50px;
+}
+::selection {
+  background: #ccc;
+}
+::-moz-selection {
+  background: #ccc;
+}
+::-webkit-selection {
+  background: #ccc;
+  color: #fff;
+}
+.header {
+  display: none;
+}

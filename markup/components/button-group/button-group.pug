@@ -1,0 +1,15 @@
+include ../button/button
+mixin button-group(params)
+    -
+        var name_block = 'button-group',
+        currentClass = name_block;
+        if('mod' in params && params.mod.length) currentClass =  name_block+'_'+params.mod;
+    +b.DIV(class= currentClass)
+        for element in params.elements
+            +button({
+                text: '',
+                type: '',
+                theme: '',
+                tag: '',
+                link: ''
+            })

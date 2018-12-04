@@ -1,0 +1,267 @@
+
+
+.footer{
+    background: #61565A;
+    &__wrap{
+        max-width: 1200px;
+        width: 100%;
+        padding-left: 15px;
+        padding-right: 15px;
+        display: block;
+        margin: auto;
+        @media (max-width: @desktop) {
+            max-width: 1024px;
+        }
+        @media (max-width:  @small-desktop) {
+            max-width: 768px;
+        }
+        @media (max-width:  @big-phone) {
+            max-width: 640px;
+        }
+        @media (max-width:  @phone) {
+            max-width: 100%;
+            padding-left: 0;
+            padding-right: 0;
+        }
+    }
+    &__list{
+        @media (max-width:  @big-phone) {
+            display: none;
+            &.active{
+                display: block;
+            }
+        }
+    }
+    &__content , &__column{
+        display: flex;
+
+    }
+    &__header{
+        line-height: normal;
+        font-size: 14px;
+        color: #FFFFFF;
+        margin-bottom: 12px;
+        @media (max-width:  @big-phone) {
+            font-size: 18px;
+            margin-bottom: 24px;
+            line-height: 37px;
+            position: relative;
+            &::after{
+                content: '';
+                position: absolute;
+                right: 27px;
+                top: 50%;
+                width: 8.5px;
+                height: 17px;
+                background: #000000;
+                transform: translateY(-50%);
+            }
+        }
+        @media (max-width:  @phone) {
+           line-height: 58px;
+           &:hover{
+                background: #584C50;
+           }
+           margin-bottom: 4px;
+        }
+    }
+    &__column-content{
+        flex-grow: 1;
+        @media (max-width:  @phone) {
+            padding-left: 30px;
+        }
+    }
+    &__content{
+        padding-top: 37px;
+        @media (max-width:  @small-desktop) {
+           display: block;
+           padding-top: 27px;
+        }
+        @media (max-width:  @big-phone) {
+            display: flex;
+        }
+        @media (max-width:  @big-phone) {
+            padding-top: 30px;
+        }
+        @media (max-width:  @phone) {
+            display: block;
+            width: 100%;
+        }
+    }
+    &__contacts--item{
+        display: block;
+        margin-bottom: 19px;
+        &:hover{
+            &.link{
+                .footer__contacts--link{
+                    color: #c87065;
+                    &::before{
+                        border-color: #c87065;
+                    }
+                }
+            }
+        }
+        @media (max-width:  @small-desktop) {
+           margin-bottom: 0;
+        }
+        @media (max-width:  @big-phone) {
+            margin-bottom: 50px;
+            &:last-child{
+                margin-bottom: 0;
+            }
+        }
+        @media (max-width:  @phone) {
+            margin-bottom: 42px;
+        }
+        .icon{
+            width: 14px;
+            height: 14px;
+            background: #000d;
+            display: inline-block;
+            border-radius: 50px;
+        }
+    }
+    &__contacts--text{
+        margin-left: 13px;
+        line-height: 28px;
+        font-size: 18px;
+        color: #FFFFFF;
+        @media (max-width:  @big-phone) {
+            font-size: 26px;
+            margin-left: 20px;
+        }
+    }
+    &__contacts{
+        @media (max-width:  @small-desktop) {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 14px;
+        }
+        @media (max-width:  @big-phone) {
+            display: block;
+            flex-grow: 1;
+            width: 50%;
+            padding-left: 40px;
+        }
+        @media (max-width:  @phone) {
+           width: 100%;
+           padding-left: 30px;
+           padding-top: 62px;
+        }
+    }
+    &__contacts--text-ghost{
+        line-height: normal;
+        font-size: 11px;
+        color: #CCCCCC;
+        display: block;
+        margin-left: 30px;
+        opacity: 0.6;
+        @media (max-width:  @big-phone) {
+            font-size: 14px;
+            margin-left: 36px;
+            margin-top: 7px;
+        }
+    }
+    &__contacts--link{
+        line-height: normal;
+        position: relative;
+        font-size: 12px;
+        color: #FFFFFF;
+        margin-left: 12px;
+        @media (max-width: @desktop) {
+            white-space: nowrap;
+        }
+        @media (max-width:  @big-phone) {
+            font-size: 18px;
+        }
+        &:after{
+            content: '';
+            width: 100%;
+            left: 0;
+            right: 0;
+            bottom: -5px;
+            border-width: 1px;
+            border-color: #fff;
+            border-style: dashed;
+            position: absolute;
+
+        }
+    }
+    &__list-item{
+        display: block;
+        margin-bottom: 5px;
+    }
+    &__column{
+        width: 80%;
+        @media (max-width:  @small-desktop) {
+            width: 100%;
+            justify-content: space-between;
+        }
+        @media (max-width:  @big-phone) {
+            display: block;
+            width: auto;
+            flex-grow: 1;
+            width: 50%;
+        }
+        @media (max-width:  @phone) {
+            display: block;
+            width: 100%;
+        }
+    }
+    &__copyright{
+        background: #30272A;
+        height: 50px;
+        align-items: center;
+        display: flex;
+        margin-top: 27px;
+        @media (max-width:  @small-desktop) {
+            margin-top: 25px;
+        }
+        @media (max-width:  @big-phone) {
+            margin-top: 11px;
+            height: 83px;
+        }
+        @media (max-width:  @phone) {
+            margin-top: 44px;
+            height: auto;
+        }
+    }
+    &__copyright--wrap{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        @media (max-width: @phone) {
+            flex-direction: column-reverse;
+            flex-wrap: wrap;
+            padding-top: 30px;
+        }
+    }
+    &__social{
+        margin-right: 65px;
+        @media (max-width: @desktop) {
+          margin-right: 0;
+        }
+    }
+    &__copyright--text{
+        line-height: normal;
+        font-size: 14px;
+        color: #A4A0A1;
+        @media (max-width:  @big-phone) {
+            padding-left: 10px;
+        }
+        @media (max-width:  @phone) {
+            margin-top: 25px;
+            margin-bottom: 25px;
+        }
+
+    }
+    &__list-item{
+        line-height: 18px;
+        font-size: 12px;
+        color: #CCCCCC;
+        text-decoration: none;
+        &:hover{
+            text-decoration: underline;
+        }
+    }
+}

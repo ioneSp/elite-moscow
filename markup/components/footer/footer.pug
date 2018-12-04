@@ -1,0 +1,69 @@
+mixin footer(data)
+    +b.footer
+        +e.wrap
+            +e.content
+                +e.column
+                    +e.column-content
+                        +e.header КАТАЛОГ:
+                        +e.list
+                            +e.A.list-item.link(href="#" target="_blank")  Мебель
+                            +e.A.list-item.link(href="#" target="_blank")  Акции и скидки
+                            +e.A.list-item.link(href="#" target="_blank")  Новинки
+                            +e.A.list-item.link(href="#" target="_blank")  Склад
+                            +e.A.list-item.link(href="#" target="_blank")  Хиты продаж
+                            +e.A.list-item.link(href="#" target="_blank")  Бренды
+                    +e.column-content
+                        +e.header КОМПАНИЯ:
+                        +e.list
+                            +e.A.list-item.link(href="#" target="_blank")   О нас
+                            +e.A.list-item.link(href="#" target="_blank")  Наши сотрудники
+                            +e.A.list-item.link(href="#" target="_blank")  Наши проекты
+                            +e.A.list-item.link(href="#" target="_blank")  Фотогалерея
+                            +e.A.list-item.link(href="#" target="_blank")  Контакты
+                            +e.A.list-item.link(href="#" target="_blank")  Отзывы
+                    +e.column-content
+                        +e.header НАШИ УСЛУГИ:
+                        +e.list
+                            +e.A.list-item.link(href="#" target="_blank")  Доставка по Москве
+                            +e.A.list-item.link(href="#" target="_blank")  Доставка по России
+                            +e.A.list-item.link(href="#" target="_blank")  Хранение
+                            +e.A.list-item.link(href="#" target="_blank")  Монтаж
+                            +e.A.list-item.link(href="#" target="_blank")  Реставрация
+                            +e.A.list-item.link(href="#" target="_blank")  Дизайн проект
+                    +e.column-content
+                        +e.header ИНФОРМАЦИЯ:
+                        +e.list
+                            +e.A.list-item.link(href="#" target="_blank")  Оплата и цена
+                            +e.A.list-item.link(href="#" target="_blank")  Сотрудничество
+                            +e.A.list-item.link(href="#" target="_blank")  Новости
+                            +e.A.list-item.link(href="#" target="_blank")  Статьи
+                            +e.A.list-item.link(href="#" target="_blank")  Вакансии
+                            +e.A.list-item.link(href="#" target="_blank")  Карта сайта
+                +e.contacts
+                    +e.A.contacts--item(href="tel:84957839733")
+                        +b.icon._type._phone
+                        +e.contacts--text 8 (495) 783-97-33
+                    +e.A.contacts--item(href="tel:88005507877")
+                        +b.icon._type._home-phone
+                        +e.contacts--text 8 (800) 550-78-77
+                        +e.contacts--text-ghost Бесплатный звонок по РФ
+                    +e.A.contacts--item(href="/contacts.html").link
+                        +b.icon._type._map
+                        +e.contacts--link Смотреть адреса на карте
+
+        +e.copyright
+            +e.copyright--wrap.__wrap
+                +e.copyright--text © ELIT - элитная мебель, 2007 - 2018
+                +e.social
+                    +b.social
+                        +e.A.item(href="#" target="_blank")
+                            +icon({mod: 'social-vk'})
+                        +e.A.item(href="#" target="_blank")
+                            +icon({mod: 'social-fb'})
+                        +e.A.item(href="#" target="_blank")
+                            +icon({mod: 'social-in'})
+                        +e.A.item(href="#" target="_blank")
+                            +icon({mod: 'social-lin'})
+                        +e.A.item(href="#" target="_blank")
+                            +icon({mod: 'social-yt'})
+                      
