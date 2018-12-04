@@ -1,1 +1,41 @@
+.entry{
+    &__item{
+        border-radius: 4px;
+        background: #ccc;
+        height: 221px;
+        position: relative;
+        display: block;
+        &__info{
+            display: block;
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0;
+        }
+        &:before{
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            left: 0;
+            bottom: 0;
+            opacity: 0.6;
+            background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(0,0,0,1) 100%);
+        }
+    }
+    &__item--date{
+        line-height: normal;
+        font-size: 13px;
+        display: block;
+        color: #FFFFFF;
 
+        opacity: 0.6;
+    }
+    &__item--name{
+        line-height: 17px;
+        font-size: 14px;
+        letter-spacing: -0.03em;
+        display: block;
+        color: #FFFFFF;
+    }
+}

@@ -6,7 +6,6 @@
   font-size: 24px;
   text-transform: uppercase;
   color: #434343;
-  margin-bottom: 20px;
 }
 @media (max-width: 480px) {
   .block-container__title {
@@ -14,4 +13,10 @@
     font-size: 18px;
     text-transform: uppercase;
   }
+}
+.block-container__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
 }
