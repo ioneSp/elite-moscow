@@ -43,7 +43,6 @@
       height: 12px;
       width: 12px;
       z-index: 1;
-      background: #CC0000;
     }
 
     &_red {
@@ -52,6 +51,19 @@
 
       &:before {
         border-right-color: #990000;
+      }
+      &:after {
+        background: #CC0000;
+      }
+    }
+    &_yellow {
+      background: #FF9900;
+      color: #fff;
+      &:before {
+        border-right-color: #FF9900;
+      }
+      &:after {
+        border-right-color: #FF9900;
       }
     }
   }

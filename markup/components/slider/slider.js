@@ -5,6 +5,12 @@ $(function () {
         dots: true
     });
 
+    $('.slider__list_card-brand').owlCarousel({
+        items: 4,
+        loop:true,
+        dots: true
+    });
+
     $('.slider__list_entry').owlCarousel({
         items: 1,
         loop:true,
