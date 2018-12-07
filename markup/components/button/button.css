@@ -69,77 +69,66 @@
         }
     }
 }*/
-
-
 .button {
-    height: 28px;
-    border-radius: 4px;
-    padding: 0 20px;
-    &:first-of-type {margin-left: 0;}
-    &:last-of-type {margin-right: 0;}
-
-    background: #ddd;
-
-    text-align: center;
-    white-space: nowrap;
-
-    font-size: 14px;
-
-    outline: transparent;
-    border: none;
-    box-shadow: none;
-
-    transition: all 0.25s ease-in-out;
-    cursor: pointer;
-    &:hover,
-    &.active {
-        color: #fff;
-    }
-    &:before {
-        content: '';
-        display: inline-block;
-        height: 100%;
-        width: 1px;
-        margin-right: -1px;
-        vertical-align: middle;
-        text-align: center;
-    }
-    &__text {
-        display: inline-block;
-        vertical-align: middle;
-        font: inherit;
-        color: inherit;
-        text-transform: inherit;
-    }
-
-
-    &_type {
-        &_primary {
-            background: transparent;
-            height: 32px;
-            padding: 0 30px;
-            border-radius: 30px;
-            border: 1px solid #BFA96A;
-            text-transform: uppercase;
-            &.active,
-            &:hover {
-                background: #BFA96A;
-                color: #ffffff;
-            }
-        }
-    }
-    &_theme {
-        &_light {
-            background: transparent;
-            border: 1px solid #BFA96A;
-            color: #434343;
-        }
-    }
-    &_mod {
-        &_card {
-            width: 100%;
-            max-width: 160px;
-            margin: 0 auto;
-        }
-    }
+  height: 28px;
+  border-radius: 4px;
+  padding: 0 20px;
+  background: #ddd;
+  text-align: center;
+  white-space: nowrap;
+  font-size: 14px;
+  outline: transparent;
+  border: none;
+  box-shadow: none;
+  transition: all 0.25s ease-in-out;
+  cursor: pointer;
+}
+.button:first-of-type {
+  margin-left: 0;
+}
+.button:last-of-type {
+  margin-right: 0;
+}
+.button:hover,
+.button.active {
+  color: #fff;
+}
+.button:before {
+  content: '';
+  display: inline-block;
+  height: 100%;
+  width: 1px;
+  margin-right: -1px;
+  vertical-align: middle;
+  text-align: center;
+}
+.button__text {
+  display: inline-block;
+  vertical-align: middle;
+  font: inherit;
+  color: inherit;
+  text-transform: inherit;
+}
+.button_type_primary {
+  background: transparent;
+  height: 32px;
+  padding: 0 30px;
+  border-radius: 30px;
+  border: 1px solid #BFA96A;
+  text-transform: uppercase;
+}
+.button_type_primary.active,
+.button_type_primary:hover {
+  background: #BFA96A;
+  color: #ffffff;
+}
+.button_theme_light {
+  background: transparent;
+  border: 1px solid #BFA96A;
+  color: #434343;
+}
+.button_mod_card {
+  width: 100%;
+  max-width: 160px;
+  margin: 0 auto;
 }
