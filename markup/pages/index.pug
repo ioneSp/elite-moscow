@@ -7,6 +7,8 @@ include ../components/icon/icon
 include ../components/social/social
 include ../components/slider/slider
 include ../components/block-container/block-container
+include ../components/grid-categories/grid-categories
+include ../components/entry/entry
 include ../components/footer/footer.pug
 
 doctype html
@@ -19,7 +21,8 @@ html(class="no-js", lang="ru")
         | %=symbols=%
         +header()
         +slider({
-            type: 'main'
+            type: 'main',
+            elements: [{},{},{},{},{}]
         })
         +b.section
             +e.box
@@ -28,67 +31,26 @@ html(class="no-js", lang="ru")
                     headerButtons: [
                         {
                             text: 'Все стили',
-                            link: '#'
+                            active: true,
+                            data: {
+                                'data-tab': '1'
+                            }
                         },
                         {
                             text: 'Классика',
-                            link: '#'
+                            data: {
+                                'data-tab': '2'
+                            }
                         },
                         {
                             text: 'Современный',
-                            link: '#'
+                            data: {
+                                'data-tab': '3'
+                            }
                         }
                     ]
                 })
-                    +b.grid-categories
-                        .grid-categories__col.grid-categories__col_size--1
-                            a.grid-categories__item(href="#" style="background-image: url(/static/img/assets/grid-categories/assets/1.jpg);")
-                                .grid-categories__label Гостиные
-                        .grid-categories__col.grid-categories__col_size--1
-                            a.grid-categories__item(href="#" style="background-image: url(/static/img/assets/grid-categories/assets/2.jpg);")
-                                .grid-categories__label Спальни
-                        .grid-categories__col.grid-categories__col_size--1
-                            a.grid-categories__item(href="#" style="background-image: url(/static/img/assets/grid-categories/assets/3.jpg);")
-                                .grid-categories__label Мягкая мебель
-                        .grid-categories__col.grid-categories__col_size--2
-                            a.grid-categories__item(href="#" style="background-image: url(/static/img/assets/grid-categories/assets/4.jpg);")
-                                .grid-categories__label Кухни
-
-                        .grid-categories__col.grid-categories__col_size--2
-                            a.grid-categories__item(href="#" style="background-image: url(/static/img/assets/grid-categories/assets/5.jpg);")
-                                .grid-categories__label Детская мебель
-                        .grid-categories__col.grid-categories__col_size--1
-                            a.grid-categories__item(href="#" style="background-image: url(/static/img/assets/grid-categories/assets/6.jpg);")
-                                .grid-categories__label Предметы интерьера
-                        .grid-categories__col.grid-categories__col_size--2
-                            a.grid-categories__item(href="#" style="background-image: url(/static/img/assets/grid-categories/assets/7.jpg);")
-                                .grid-categories__label Офисная мебель
-
-                        .grid-categories__col.grid-categories__col_size--1
-                            a.grid-categories__item(href="#" style="background-image: url(/static/img/assets/grid-categories/assets/8.png);")
-                                .grid-categories__label Кабинеты
-                        .grid-categories__col.grid-categories__col_size--2
-                            a.grid-categories__item(href="#" style="background-image: url(/static/img/assets/grid-categories/assets/9.jpg);")
-                                .grid-categories__label Проектная мебель
-                        .grid-categories__col.grid-categories__col_size--1
-                            a.grid-categories__item(href="#" style="background-image: url(/static/img/assets/grid-categories/assets/10.jpg);")
-                                .grid-categories__label Ванные комнаты
-                        .grid-categories__col.grid-categories__col_size--1
-                            a.grid-categories__item(href="#" style="background-image: url(/static/img/assets/grid-categories/assets/11.jpg);")
-                                .grid-categories__label Межкомнатные  двери
-
-                        .grid-categories__col.grid-categories__col_size--1
-                            a.grid-categories__item(href="#" style="background-image: url(/static/img/assets/grid-categories/assets/12.jpg);")
-                                .grid-categories__label Прихожие
-                        .grid-categories__col.grid-categories__col_size--1
-                            a.grid-categories__item(href="#" style="background-image: url(/static/img/assets/grid-categories/assets/13.jpg);")
-                                .grid-categories__label Стенки ТВ и стеллажи
-                        .grid-categories__col.grid-categories__col_size--2
-                            a.grid-categories__item(href="#" style="background-image: url(/static/img/assets/grid-categories/assets/14.jpg);")
-                                .grid-categories__label Столы и стулья
-                        .grid-categories__col.grid-categories__col_size--1
-                            a.grid-categories__item(href="#" style="background-image: url(/static/img/assets/grid-categories/assets/15.jpg);")
-                                .grid-categories__label Шкафы и гардеробы
+                    +grid-categories()
         +b.promo._type_main.section(style="background-image: url(/static/img/assets/promo/promo_type_main.png)")
                 .section__box
                     +b.row
@@ -161,23 +123,10 @@ html(class="no-js", lang="ru")
                     title: 'Новости',
                     headerLink: {name: 'Смотреть все', href: '/'}
                 })
-                    +b.entry
-                        .row
-                            .col-md-4
-                                +e.A.item(style="background-image: url()")
-                                    +e.info
-                                        +e.item--date 10.10.2016
-                                        +e.item--name Выбираем мебель для зоны отдыха в гостинной
-                            .col-md-4
-                                +e.A.item(style="background-image: url()")
-                                    +e.info
-                                        +e.item--date 10.10.2016
-                                        +e.item--name Выбираем мебель для зоны отдыха в гостинной
-                            .col-md-4
-                                +e.A.item(style="background-image: url()")
-                                    +e.info
-                                        +e.item--date 10.10.2016
-                                        +e.item--name Выбираем мебель для зоны отдыха в гостинной
+                    +slider({
+                        type: 'entry',
+                        elements: [{},{},{},{},{}]
+                    })
         +b.promo._type_offer
             .row
                 .col-md-6.promo__col--mobile
@@ -202,8 +151,11 @@ html(class="no-js", lang="ru")
                     +e.header ИЩИТЕ ЛУЧШУЮ СТОИМОСТЬ?
                     +e.description Напишите  нам название интересующего Вас товара. Сравните цены. Получите самое выгодное предложение
                     +e.button
-                        +b.A.button._theme_light(href="#")
-                            +e.text ПОЛУЧИТЬ ПРЕДЛОЖЕНИЕ
+                        +button({
+                            text: 'получить предложение',
+                            type: 'primary',
+                            link: '#'
+                        })
         +footer()
 
         script(src='%=static=%js/separate-js/svg4everybody.min.js')

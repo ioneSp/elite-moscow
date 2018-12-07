@@ -11,9 +11,12 @@ mixin block-container(params)
             +e.navigation
                 if(params.headerButtons)
                     -
-                        for(var i = 0; i < params.headerButtons.length; i++) params.headerButtons[i]['type'] = 'type_1';
+                        for(var i = 0; i < params.headerButtons.length; i++) {
+                            params.headerButtons[i]['mod'] = 'nav';
+                            //params.headerButtons[i]['mod'] = 'nav';
+                        }
                     +button-group({
-                        mod: '',
+                        mod: 'navigation',
                         elements: params.headerButtons
                     })
                 if(params.headerLink)

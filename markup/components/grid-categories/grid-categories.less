@@ -1,13 +1,18 @@
-.grid-categories{
-    display: flex;
-    flex-wrap: wrap;
+.grid-categories {
+    margin: -5px -5px 0;
+    &__tab {
+        display: none;
+        &.active {
+            display: flex!important;
+        }
+        flex-wrap: wrap;
+    }
     .grid-categories__col{
         padding: 5px;
         transition: all .3s;
         @media (max-width:  767px) {
             padding: 2.5px;
         }
-        
     }
     .grid-categories__col_size--1{
         width: 20%;

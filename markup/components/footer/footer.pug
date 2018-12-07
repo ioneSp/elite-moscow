@@ -1,3 +1,4 @@
+include ../header-cart/header-cart
 mixin footer(data)
     +b.footer
         +e.wrap
@@ -66,4 +67,5 @@ mixin footer(data)
                             +icon({mod: 'social-lin'})
                         +e.A.item(href="#" target="_blank")
                             +icon({mod: 'social-yt'})
-                      
+    +b.cart.popup.ui.bottom.transition.hidden
+        +header-cart()

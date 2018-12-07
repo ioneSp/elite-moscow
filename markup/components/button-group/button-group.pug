@@ -1,2 +1,5 @@
-mixin button-group(data)
+include ../button/button
+mixin button-group(params)
     .button-group
+        each button in params.elements
+            +button(button)
