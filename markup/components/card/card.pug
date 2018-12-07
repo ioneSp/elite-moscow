@@ -1,8 +1,12 @@
 include ../button/button
 mixin card(params)
+
     +b.card
         +e.box
-            +e.label_red Акция - 56%
+            -
+                var classLabel = 'label';
+                if('label_mod' in params && params.label_mod.length) classLabel += '_'+params.label_mod;
+            +e(class=classLabel) Акция - 56%
             +e.view
                 +e.IMG.image(src="/static/img/assets/card/product.jpg" alt="")
                 +e.OL.stars

@@ -36,7 +36,9 @@ mixin slider(params)
                                             img(src='../static/img/assets/slider/add.jpg' alt='')
                         when 'brand'
                             +brand-card()
+                        when 'card-brand'
+                            +card({label_mod: 'yellow'})
                         when 'card'
-                            +card()
+                            +card({label_mod: 'red'})
                         when 'entry'
                             +entry()
