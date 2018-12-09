@@ -1,6 +1,27 @@
 include ../header-cart/header-cart
-mixin footer(data)
+mixin footer(params)
     +b.footer
+        if(params.promo)
+            +b.promo-full_footer(style="background-image: url('/static/img/assets/promo-full/footer.jpg')")
+                +e.box
+                    +e.center
+                        +e.title ВАМ НУЖНА ПОМОЩЬ В ВЫБОРЕ?
+                        +e.description.
+                            Мы предлагаем Вам оставить заявку на нашем сайте, чтобы наш менеджер смог связаться с Вами и помочь решить все Ваши вопросы и тонкости выбора.
+                        +b.FORM.form_footer
+                            +e.main
+                                +e.INPUT.input(name="name" val="" placeholder="Представьтесь пожалуйста")
+                                +e.INPUT.input(name="phone" val="" placeholder="Ваш номер телефона")
+                                +e.INPUT.input(name="email" val="" placeholder="Ваш адрес электронной почты")
+                                +e.check
+                                    input(type="hidden" name="requiredField" value="")
+                                    .ui.checkbox
+                                        input.hidden(type='checkbox', tabindex='0')
+                                        label!= "Я ознакомлен с  "
+                                            a(href="/data-safety/") политикой конфиденциальности
+                                            |  и даю согласие на обработку персональных данных
+                            +e.footer
+                                +button({text: 'Отправить',type: 'primary'})
         +e.wrap
             +e.content
                 +e.column

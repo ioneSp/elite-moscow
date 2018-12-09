@@ -1,0 +1,256 @@
+.catalog {
+  padding-bottom: 64px;
+
+  &__box {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+  }
+
+  &__filter {
+    padding-top: 56px;
+    width: 100%;
+    max-width: 240px;
+    margin-right: 20px;
+  }
+
+  &__grid {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: space-between;
+
+    &-filter {
+
+    }
+
+    &-cards {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      margin: 0 -10px 4px -10px;
+
+      .card {
+        width: 33.3333%;
+        max-width: 310px;
+        padding: 0 10px;
+        margin-bottom: 33px;
+
+        &__box {
+          background: #fff;
+        }
+
+        &__info {
+          padding: 7px 0 21px;
+          color: #434343;
+          text-align: center;
+
+        }
+
+        &__vendor-code {
+          font-size: 14px;
+          margin-bottom: 4px;
+        }
+
+        &__title {
+          line-height: 20px;
+          margin-top: -3px;
+          display: inline-block;
+          padding: 0 35px;
+        }
+
+        &__price {
+          margin-bottom: 7px;
+        }
+
+        &__btn {
+          margin-bottom: 0;
+        }
+      }
+    }
+
+    .promo__description {
+      padding-left: 4.5%;
+      font-size: 14px;
+      line-height: 1.5;
+      margin: 0 0 12px;
+
+      p {
+        font-size: 14px;
+        line-height: 1.5;
+      }
+    }
+
+    .promo .read-more {
+      display: inline-block;
+      padding-top: 0;
+      font-size: 16px;
+      border-bottom: 1px dotted;
+      line-height: 1.3;
+    }
+  }
+
+  &__pagination {
+    margin-bottom: 54px;
+  }
+
+  &__btn-clear {
+
+  }
+
+  &__grid-filters {
+    display: flex;
+    flex-direction: column;
+    height: 56px;
+  }
+
+  &__grid-filter {
+    &-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+
+      &:last-of-type {
+        padding: 20px 0;
+        display: none;
+
+      }
+    }
+
+    &_buttons {
+      .button {
+        margin: 0 5px;
+
+        &:first-of-type {
+          margin-left: 0;
+        }
+
+        &:last-of-type {
+          margin-right: 0;
+        }
+      }
+    }
+
+    &_toggle {
+      .button {
+        &.active {
+          position: relative;
+          z-index: 9;
+        }
+
+        margin: 0 -3px;
+
+        &:first-of-type {
+          margin-left: 0;
+        }
+
+        &:last-of-type {
+          margin-right: 0;
+        }
+      }
+    }
+  }
+  .button_mod_mobile-filter {
+    width: 100%;
+    height: 40px;
+    background: #fff;
+
+    &:hover {
+      color: #434343;
+      background: #fff;
+    }
+
+    .button__text {
+      display: inline-block;
+      position: relative;
+      padding-left: 26px;
+
+      &:before {
+        content: '';
+        display: block;
+        width: 16px;
+        height: 16px;
+        position: absolute;
+        top: 50%;
+        margin-top: -8px;
+        left: 0;
+        background: url('../img/assets/catalog/icon_filter.svg') center / cover no-repeat;
+      }
+    }
+  }
+}
+@media (max-width: 1023px) {
+  .catalog {
+    &__filter {
+      display: none;
+    }
+
+    &__grid-filters {
+      height: auto;
+    }
+
+    &__grid-filter {
+      &-row:last-of-type {
+        display: block;
+      }
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .catalog {
+    &__grid-filters {
+      height: 56px;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+    &__grid-filter {
+      &_toggle {
+        display: none;
+      }
+    }
+    .card {
+      width: 50%;
+    }
+    &__grid-filter {
+      &-row:last-of-type {
+        padding: 0;
+      }
+    }
+    .button_mod_mobile-filter {
+      height: 28px;
+    }
+  }
+}
+@media (max-width: 639px) {
+  .catalog {
+    &__grid-filters {
+      height: auto;
+      flex-direction: column;
+      justify-content: flex-start;
+    }
+    &__grid-filter {
+      &-row:last-of-type {
+        padding: 10px 0;
+      }
+    }
+  }
+}
+@media (max-width: 539px) {
+  .catalog {
+    width: 100%;
+    max-width: 320px;
+    margin: 0 auto;
+    .card {
+      width: 100%;
+      margin: 0 auto 20px auto;
+    }
+    &__grid-filter_buttons {
+      justify-content: space-between;
+      .button {
+        margin: 0 2px;
+        padding: 0 9px;
+      }
+    }
+  }
+}

@@ -1,0 +1,112 @@
+include ../components/libs/bemto/bemto
+include ../components/libs/jade-injected/jade-injected
+
+include ../components/head/head.pug
+include ../components/header/header
+include ../components/icon/icon
+include ../components/breadcrumbs/breadcrumbs
+include ../components/card/card
+include ../components/pagination/pagination
+include ../components/banner/banner
+include ../components/headline/headline
+include ../components/filter-sidebar/filter-sidebar
+include ../components/footer/footer.pug
+
+doctype html
+html(class="no-js", lang="ru")
+    head
+        +head({
+            title: 'Интернет магазин Итальянской мебели в Москве'
+        })
+    body.page.page_catalog
+        | %=symbols=%
+        +header()
+        +b.section
+            +e.box
+                +b.head-conent
+                    +headline({text: 'ИТАЛЬЯНСКИЕ СПАЛЬНИ'})
+                        +breadcrumbs({elements: ['Главная', 'Каталог', 'Спальни']})
+                +b.catalog
+                    +e.box
+                        +e.filter
+                            +b.filter
+                                +e.header
+                                    +e.title Фильтр
+                                +e.main
+                                    - var arSection = ['Категория','Стиль','Фабрика','Свойства','Предмет'];
+                                    each section, sectionIndex in arSection
+                                        +b.filter-section
+                                            - var open = sectionIndex === 0 ? 'open' : '';
+                                            +e.header(class=open)
+                                                +e.header-text= section
+                                                +e.header-arrow!= pugHelpers.Icon.call(locals, {iconName: 'filter-arrow'})
+                                            +e.main
+                                                - var arFilter = ['Спальни','Ванные комнаты','Гостиные','Детская мебель','Кабинеты','Кухни'];
+                                                each item, index in arFilter
+                                                    +e.element
+                                                        .ui.checkbox
+                                                            input(type="checkbox" name=item id="checkbox_"+sectionIndex+"_"+index)
+                                                            label(for="checkbox_"+sectionIndex+"_"+index)= item
+                                                +e.more
+                                                    +e.more-list
+                                                        - var arFilter = ['Спальни','Ванные комнаты','Гостиные','Детская мебель','Кабинеты','Кухни'];
+                                                        each item, index in arFilter
+                                                            +e.element
+                                                                .ui.checkbox
+                                                                    input(type="checkbox" name=item id="checkbox_more_" + sectionIndex + "_" + index)
+                                                                    label(for="checkbox_more_" + sectionIndex + "_" + index)= item
+                                                    +e.more-btn Показать все
+                                    +e.item
+                                        .ui.checkbox
+                                            input(type="checkbox" name="НА СКЛАДЕ" id="checkbox_7_1")
+                                            label(for="checkbox_7_1") НА СКЛАДЕ
+                                    +e.item
+                                        .ui.checkbox
+                                            input(type="checkbox" name="НА СКЛАДЕ" id="checkbox_7_2")
+                                            label(for="checkbox_7_2") НА СКЛАДЕ
+                                +e.footer
+                                    +button({text: 'Очистить', type: 'primary'})
+                            +banner({
+                                title: 'ИНТЕРЬЕРЫ ИТАЛИИ 12- <br>ТЕСТ,ТЕСТ',
+                                remark: 'Кухни CESAR. <br>Официальный диллер'
+                            })
+                            +banner({
+                                title: 'ИНТЕРЬЕРЫ ИТАЛИИ 12- <br>ТЕСТ,ТЕСТ',
+                                remark: 'Кухни CESAR. <br>Официальный диллер'
+                            })
+                        +e.grid
+                            +e.grid-filters
+                                +e.grid-filter-row
+                                    +e.grid-filter_buttons
+                                        +button({text:'Все стили',active: true})
+                                        +button({text:'Классика'})
+                                        +button({text:'Современный'})
+                                    +e.grid-filter_toggle
+                                        +button({text: 'Композиции',active: true})
+                                        +button({text: 'Товары'})
+                                +e.grid-filter-row
+                                    +button({text:'Показать фильтры',mod: 'mobile-filter'})
+                            +e.grid-cards
+                                - var n = 0
+                                while n < 12
+                                    +card({
+                                        image: 'product_catalog.png',
+                                        code: 'Композиция: 133-072',
+                                        name: 'Журнальные столики и пуфы коллекции Philipp фабрики Selva',
+                                        price: 'от 234 567 ₽'
+                                    })
+                                    - n++;
+                            +e.pagination
+                                +pagination({})
+                            +b.promo
+                                +e.description
+                                    p Итальянская мебель для гостиной - это респектабельная продукция, которая остается актуальной даже спустя десятилетия. Она является стильным дополнением интерьера и способен подчеркнуть прекрасный вкус своего владельца. В нашем салоне в Москве представлена мебель для гостиных от ведущих итальянских фабрик: Marconcini Style, Camelgroup, Status и многих других.
+                                    p.more(id="more")   Вот уже много веков Италия является крупнейшим в мире производителем элитной мебели, лидером сегмента мебели премиум-класса, родоначальником различных направлений мебельного искусства, законодателем моды и инновационного дизайна.
+                                    a.read-more(href="more").link.read-more Читать полностью
+        +filter-sidebar()
+        +footer({promo: true})
+        script(src='%=static=%js/separate-js/svg4everybody.min.js')
+        script svg4everybody();
+
+        //- Main scripts. You can replace it, but I recommend you to leave it here
+        script(src='%=static=%js/main%=hash=%%=min=%.js')

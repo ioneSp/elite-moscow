@@ -52,41 +52,41 @@ html(class="no-js", lang="ru")
                 })
                     +grid-categories()
         +b.promo._type_main.section
-                .section__box
-                    +b.row
-                        .col-xs-12.col-md-6
-                            .promo__content
-                                .promo__header
-                                    .promo__title МЕБЕЛЬ ИЗ ИТАЛИИ — ЛУЧШИЙ ВЫБОР В СОЗДАНИИ СОВРЕМЕННОГО ИНТЕРЬЕРА
-                                .promo__description
-                                    p   Вот уже много веков Италия является крупнейшим в мире производителем элитной мебели, лидером сегмента мебели премиум-класса, родоначальником различных направлений мебельного искусства, законодателем моды и инновационного дизайна.
-                                    p.more(id="more")   Вот уже много веков Италия является крупнейшим в мире производителем элитной мебели, лидером сегмента мебели премиум-класса, родоначальником различных направлений мебельного искусства, законодателем моды и инновационного дизайна.
-                                    a.read-more(href="more").link.read-more Читать полностью
-                            .promo__info
-                                .promo__info--cell
-                                    .promo__info--number
-                                        span.spincrement 280
-                                        span +
-                                    .promo__info--text
-                                        | мебельных
-                                        br
-                                        | брендов
-                                .promo__info--cell
-                                    .promo__info--number 10
-                                    .promo__info--text
+            .section__box
+                +b.row
+                    .col-xs-12.col-md-6
+                        .promo__content
+                            .promo__header
+                                .promo__title МЕБЕЛЬ ИЗ ИТАЛИИ — ЛУЧШИЙ ВЫБОР В СОЗДАНИИ СОВРЕМЕННОГО ИНТЕРЬЕРА
+                            .promo__description
+                                p   Вот уже много веков Италия является крупнейшим в мире производителем элитной мебели, лидером сегмента мебели премиум-класса, родоначальником различных направлений мебельного искусства, законодателем моды и инновационного дизайна.
+                                p.more(id="more")   Вот уже много веков Италия является крупнейшим в мире производителем элитной мебели, лидером сегмента мебели премиум-класса, родоначальником различных направлений мебельного искусства, законодателем моды и инновационного дизайна.
+                                a.read-more(href="more").link.read-more Читать полностью
+                        .promo__info
+                            .promo__info--cell
+                                .promo__info--number
+                                    span.spincrement 280
+                                    span +
+                                .promo__info--text
+                                    | мебельных
+                                    br
+                                    | брендов
+                            .promo__info--cell
+                                .promo__info--number 10
+                                .promo__info--text
 
-                                        | лет на рынке
-                                        br
-                                        | мебели
-                                .promo__info--cell
-                                    .promo__info--text
-                                        | ДОСТАВКА
-                                        br
-                                        | ПО ВСЕЙ
-                                        br
-                                        | РОСИИ И
-                                        br
-                                        | СТРАНАМ СНГ
+                                    | лет на рынке
+                                    br
+                                    | мебели
+                            .promo__info--cell
+                                .promo__info--text
+                                    | ДОСТАВКА
+                                    br
+                                    | ПО ВСЕЙ
+                                    br
+                                    | РОСИИ И
+                                    br
+                                    | СТРАНАМ СНГ
         +b.section
             +e.box
                 +block-container({
@@ -156,7 +156,7 @@ html(class="no-js", lang="ru")
                             type: 'primary',
                             link: '#'
                         })
-        +footer()
+        +footer({})
 
         script(src='%=static=%js/separate-js/svg4everybody.min.js')
         script svg4everybody();

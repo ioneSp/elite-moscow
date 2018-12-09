@@ -72,74 +72,98 @@
 
 
 .button {
-    height: 28px;
-    border-radius: 4px;
-    padding: 0 20px;
-    &:first-of-type {margin-left: 0;}
-    &:last-of-type {margin-right: 0;}
+  height: 28px;
+  border-radius: 4px;
+  padding: 0 20px;
 
-    background: #ddd;
+  &:first-of-type {
+    margin-left: 0;
+  }
 
+  &:last-of-type {
+    margin-right: 0;
+  }
+
+  background: #ddd;
+
+  text-align: center;
+  white-space: nowrap;
+
+  font-size: 14px;
+
+  outline: transparent;
+  border: none;
+  box-shadow: none;
+
+  transition: all 0.25s ease-in-out;
+  cursor: pointer;
+
+  &:hover,
+  &.active {
+    background: #4d4145;
+    color: #fff;
+  }
+
+  &:before {
+    content: '';
+    display: inline-block;
+    height: 100%;
+    width: 1px;
+    margin-right: -1px;
+    vertical-align: middle;
     text-align: center;
-    white-space: nowrap;
+  }
 
-    font-size: 14px;
+  &__text {
+    display: inline-block;
+    vertical-align: middle;
+    font: inherit;
+    color: inherit;
+    text-transform: inherit;
+  }
 
-    outline: transparent;
-    border: none;
-    box-shadow: none;
-
-    transition: all 0.25s ease-in-out;
-    cursor: pointer;
-    &:hover,
-    &.active {
-        color: #fff;
-    }
-    &:before {
-        content: '';
-        display: inline-block;
-        height: 100%;
-        width: 1px;
-        margin-right: -1px;
-        vertical-align: middle;
-        text-align: center;
-    }
-    &__text {
-        display: inline-block;
-        vertical-align: middle;
-        font: inherit;
-        color: inherit;
-        text-transform: inherit;
-    }
-
-
+  &.button {
     &_type {
-        &_primary {
-            background: transparent;
-            height: 32px;
-            padding: 0 30px;
-            border-radius: 30px;
-            border: 1px solid #BFA96A;
-            text-transform: uppercase;
-            &.active,
-            &:hover {
-                background: #BFA96A;
-                color: #ffffff;
-            }
+      &_primary {
+        background: transparent;
+        height: 32px;
+        padding: 0 30px;
+        border-radius: 30px;
+        border: 1px solid #BFA96A;
+        text-transform: uppercase;
+
+        &.active,
+        &:hover {
+          background: #BFA96A;
+          color: #ffffff;
         }
+      }
     }
+
     &_theme {
-        &_light {
-            background: transparent;
-            border: 1px solid #BFA96A;
-            color: #434343;
-        }
+      &_light {
+        background: transparent;
+        border: 1px solid #BFA96A;
+        color: #434343;
+      }
     }
+
+
     &_mod {
-        &_card {
-            width: 100%;
-            max-width: 160px;
-            margin: 0 auto;
-        }
+      &_card {
+        width: 100%;
+        max-width: 160px;
+        margin: 0 auto;
+      }
+
+      &_banner {
+        width: 100%;
+        max-width: 116px;
+        background: transparent;
+        color: #fff;
+        border: 1px solid #fff;
+        height: 36px;
+      }
     }
+  }
 }

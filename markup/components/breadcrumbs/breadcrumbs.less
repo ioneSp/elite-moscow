@@ -1,0 +1,32 @@
+.breadcrumbs {
+  &__list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  &__item {
+    position: relative;
+    line-height: 12px;
+    font-size: 13px;
+    &:not(:last-of-type) {
+      padding-right: 34px;
+      &:after {
+        content: '';
+        display: block;
+        position: absolute;
+        width: 6px;
+        height: 14px;
+        background: url("../img/assets/breadcrumbs/arrow.svg") center / cover no-repeat;
+        right: 13px;
+        top: -1px;
+      }
+    }
+
+    strong {
+      font: inherit;
+    }
+  }
+}

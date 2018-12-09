@@ -1,24 +1,27 @@
 include ../button/button
 mixin card(params)
-
     +b.card
         +e.box
             -
                 var classLabel = 'label';
                 if('label_mod' in params && params.label_mod.length) classLabel += '_'+params.label_mod;
-            +e(class=classLabel) Акция - 56%
+            if(params.label)
+                +e(class=classLabel)= params.label
             +e.view
-                +e.IMG.image(src="/static/img/assets/card/product.jpg" alt="")
-                +e.OL.stars
-                    +e.LI.star_active
-                    +e.LI.star_active
-                    +e.LI.star_active
-                    +e.LI.star_active
-                    +e.LI.star_active
+                +e.IMG.image(src='static/img/assets/card/'+params.image alt="")
+                if(params.stars)
+                    +e.OL.stars
+                        +e.LI.star_active
+                        +e.LI.star_active
+                        +e.LI.star_active
+                        +e.LI.star_active
+                        +e.LI.star_active
             +e.info
-                +e.vendor-code Композиция: 133-072
-                +e.A.title.link(href="#") Журнальные столики и пуфы коллекции Philipp фабрики Selva
-                +e.price от 234 567 ₽
+                if(params.code)
+                    +e.vendor-code= params.code
+                +e.A.title.link(href="#")= params.name
+                +e.price=params.price
                 +e.btn
                     +button({text: 'В корзину', type: 'primary', mod: 'card'})
-                +e.availability В наличии
+                if(params.availab)
+                    +e.availability В наличии
