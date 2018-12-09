@@ -49,7 +49,6 @@
   margin-bottom: 95px;
 }
 .promo_type_offer .button {
-  width: 236px;
   height: 32px;
   border-radius: 30px;
   display: block;
@@ -163,7 +162,6 @@
   }
 }
 .promo_type_order .button {
-  width: 236px;
   height: 32px;
   border-radius: 30px;
   display: block;
@@ -331,7 +329,6 @@
 }
 .promo .read-more {
   padding-top: 20px;
-  display: block;
 }
 .promo .more {
   display: none;

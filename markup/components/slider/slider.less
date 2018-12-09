@@ -330,7 +330,83 @@
       background-color: #4D4145;
     }
   }
+  &__main{
+    height: 270px;
+    position: relative;
+    overflow: hidden;
+  }
+  &__share{
+    height: 40px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: block;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.85);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .icon.icon_type_fire{
+        width: 16px;
+        height: 16px;
+        background-image: url('../img/assets/icon/fire.svg');
+    }
+
+  }
+  &__share--text{
+    margin-left: 15px;
+    font-style: normal;
+    font-weight: normal;
+    line-height: normal;
+    font-size: 16px;
+
+    color: #434343;
+  }
+
+  &__min{
+    margin-top: 10px;
+    display: flex;
+    
+    justify-content: space-between;
+  }
+  &__min--item{
+    transition: all .4s;
+    cursor: pointer;
+    max-width: 106px;
+    max-height: 100px;
+    overflow: hidden;
+    img{
+      height: 100%;
+      width: 100%;
+    }
+    &:hover{
+      opacity: 0.7;
+    }
+  }
+  &__main--item img{
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  &_type{
+    &_product{
+      margin: 0 !important;
+    }
+  }
 }
 .slider_main{
   display: none;
+}
+@media (max-width: 639px) {
+  .slider__list--full .slider__main{
+    height: 159px;
+  }
+  .slider__share--text{
+    font-size: 12px !important;
+  }
+  .slider__min--item{
+    max-width: 67px;
+    max-height: 47px;
+  }
 }

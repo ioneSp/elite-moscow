@@ -70,6 +70,7 @@
 @media (max-width: 639px) {
   .footer__header {
     line-height: 58px;
+    padding-left: 30px;
     margin-bottom: 4px;
   }
   .footer__header:hover {
@@ -83,6 +84,8 @@
 @media (max-width: 639px) {
   .footer__column-content {
     padding-left: 30px;
+    padding-left: 0;
+    margin-left: 0;
   }
 }
 .footer__content {

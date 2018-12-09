@@ -91,6 +91,7 @@
 }
 .button:hover,
 .button.active {
+  background-color: #4D4145;
   color: #fff;
 }
 .button:before {

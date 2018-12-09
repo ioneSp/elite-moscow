@@ -1,0 +1,22 @@
+.breadcrumbs{
+    &__list{
+        margin: 0;
+        padding: 0;
+    }
+    &__item{
+        list-style: none;
+        display: inline-block;
+        position: relative;
+        &::after{
+            content: ''
+        }
+    }
+    &__text{
+        line-height: 12px;
+        font-size: 13px;
+        text-align: center;
+        padding-left: 15px;
+        color: #434343;
+
+    }
+}

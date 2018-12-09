@@ -1,0 +1,333 @@
+include ../components/libs/bemto/bemto
+include ../components/libs/jade-injected/jade-injected
+
+include ../components/head/head.pug
+include ../components/header/header
+include ../components/icon/icon
+include ../components/social/social
+include ../components/slider/slider
+include ../components/block-container/block-container
+include ../components/grid-categories/grid-categories
+include ../components/entry/entry
+include ../components/footer/footer.pug
+
+include ../components/breadcrumbs/breadcrumbs
+include ../components/form/form
+include ../components/headline/headline
+include ../components/product/product
+doctype html
+html(class="no-js", lang="ru")
+    head
+        +head({
+            title: 'Интернет магазин Итальянской мебели в Москве'
+        })
+    body.page(style="background:#F1F1F1")
+        | %=symbols=%
+        +header()
+        +b.section
+            +e.box
+                +b.product.flex.top
+                    +e.col._size_6
+                        +b.slider._type_product
+                            +e.list--full
+                                +e.main
+                                    +e.main--item
+                                    
+                                        img(src="/static/img/assets/slider/slider-product--main.png", alt="")
+                                    +e.A.share(href="#")
+                                        +b.icon._type_fire
+                                        +e.SPAN.share--text Скидка до 60% на кровати в цвете орех
+                                +e.min
+                                    +e.min--item
+                                        img(src="/static/img/assets/slider/slider-product--min.png", alt="")
+                                    +e.min--item
+                                        img(src="/static/img/assets/slider/slider-product--min.png", alt="")
+                                    +e.min--item
+                                        img(src="/static/img/assets/slider/slider-product--min.png", alt="")
+                                    +e.min--item
+                                        img(src="/static/img/assets/slider/slider-product--min.png", alt="")
+                                    +e.min--item
+                                        img(src="/static/img/assets/slider/slider-product--min.png", alt="")
+                    +e.col._size_6.flex.mobile
+                        +e.col._size_6.hide
+                            .product__info._main
+                                .product__info--head Характеристики
+                                .product__info--content
+                                    .product__info--item
+                                        b Композиция:
+                                        span.product__info--text 139-342
+                                    .product__info--item
+                                        b Стиль:
+                                        span.product__info--text Современный
+                                    .product__info--item
+                                        b Страна:
+                                        span.product__info--text Италия
+                                    .product__info--item
+                                        b Материал:
+                                        span.product__info--text кожа, масив , дерева, экокожа, шпон, ткань
+                                    .product__info--item
+                                        b Тввар:
+                                        span.product__info--text под заказ
+                                    .product__info--item
+                                        b Срок производства:
+                                        span.product__info--text 30 дней
+                            .product__info._padding-false
+                                 .product__info--head Рейтинг товара
+                                 .product__info--content
+                                    +b.rating.product__info--rating
+                                        +e.star.active
+                                        +e.star.active
+                                        +e.star.active
+                                        +e.star
+                                        +e.star
+                                    a.product__info--link(href="#") Написать отзыв
+                           
+                        +e.col._size_6
+                            .product__info._main
+                                .product__info--head Цена за комплект
+                                .product__info--content
+                                    .product__info--price 
+                                        | от 
+                                        b 25 854 
+                                        | Р
+                                    .product__info--price_small.share от  25 854 Р
+                                    a.product__info--link(href="#") Состав комплекта
+                                    .product__info--button
+                                        +button({
+                                            text: 'в корзину',
+                                            type: 'primary',
+                                            link: '#'
+                                        })
+                                    .product__info--button
+                                        +button({
+                                            text: 'Отправить запрос',
+                                            type: 'primary',
+                                            link: '#'
+                                        })
+                            .product__info._padding-false
+                                .product__info--head ОТОБРАЖАТЬ ЦЕНЫ:
+                                .product__info--content
+                                    +b.course.product__info--course
+                                        +e.item
+                                            i.euro.icon
+                                        +e.item
+                                            i.ruble.icon
+                                        +e.item
+                                            i.dollar.icon
+                +b.product
+                    +e.link--container
+                        +e.link(href="#")
+                            +b.icon._type_pdf
+                            +e.link--text Смотреть каталоги в PDF
+                        +e.A.link(href="#")
+                            +b.icon._type_youtube
+                            +e.link--text Смотреть видео
+                        +e.share
+                            +e.share--text Поделиться
+                            +e.A.share--item(href="#")
+                                .vk
+                            +e.A.share--item(href="#")
+                                .fb
+                            +e.A.share--item(href="#")
+                                .tw
+                            +e.A.share--item(href="#")
+                                .in
+                +b.product.flex.desktop-hide   
+                    +e.col._size_6.flex 
+                        .product__info._main
+                            .product__info--head Характеристики
+                            .product__info--content
+                                .product__info--item
+                                    b Композиция:
+                                    span.product__info--text 139-342
+                                .product__info--item
+                                    b Стиль:
+                                    span.product__info--text Современный
+                                .product__info--item
+                                    b Страна:
+                                    span.product__info--text Италия
+                                .product__info--item
+                                    b Материал:
+                                    span.product__info--text кожа, масив , дерева, экокожа, шпон, ткань
+                                .product__info--item
+                                    b Тввар:
+                                    span.product__info--text под заказ
+                                .product__info--item
+                                    b Срок производства:
+                                    span.product__info--text 30 дней
+                            
+                    +e.col._size_6.mobile
+                        .product__info._padding-false._flex
+                                .product__info--wrap
+                                    .product__info--head Рейтинг товара
+                                    .product__info--content
+                                        +b.rating.product__info--rating
+                                            +e.star.active
+                                            +e.star.active
+                                            +e.star.active
+                                            +e.star
+                                            +e.star
+                                        a.product__info--link(href="#") Написать отзыв
+                
+                .tabs
+                    .tabs__nav
+                        a.tabs__item.active(data-tab='one') Описание товара
+                        a.tabs__item(data-tab='two') отзывы
+                        a.tabs__item(data-tab='three') доставка
+                        a.tabs__item(data-tab='four') оплата
+                        a.tabs__item(data-tab='five') гарантии продавца
+                    .tabs__content
+                        .ui.tab.active(data-tab='one') 
+                            p Фабрика итальянской мебели Mario Villanova занимается производством мебели в классическом стиле и стиле модерн с 1953 года. Компания постоянно расширяет ассортимент производимой мебели, предлагает потребителям новые коллекции и отличается разнообразием дизайна. Однако вся продукция Villanova отличается высочайшим качеством. Несмотря на приверженность к классическому стилю итальянская фабрика Villanova не выглядит старомодной. Продукция отвечает всем современным стандартам и требованиям, которые предъявляются к мировым производителям к качественной и стильной мебели. 
+                            p.more(id="more" style="display:none")  Вот уже много веков Италия является крупнейшим в мире производителем элитной мебели, лидером сегмента мебели премиум-класса, родоначальником различных направлений мебельного искусства, законодателем моды и инновационного дизайна.
+                            a.read-more.link.read-more(href="more") Читать полностью
+                        .ui.tab(data-tab='two')
+                            h2 Отзывов не найдено
+                        .ui.tab(data-tab='three')
+                            h2 Блок в разработке
+                        .ui.tab(data-tab='four')
+                            h2 Блок в разработке
+                        .ui.tab(data-tab='five')
+                            h2 Блок в разработке
+                .block-container
+                    .block-container__header
+                        h2.block-container__title товары к композиции
+                        .block-container__navigation
+                            .product__share--text Отображать цены
+                            .course
+                                .course__item
+                                    i.euro.icon
+                                .course__item
+                                    i.ruble.icon
+                                .course__item
+                                    i.dollar.icon
+                    .block-container__content
+                        +b.product-card
+                            +e.image
+                                img(src="/static/img/assets/slider/slider-product--min.png", alt="")
+                                +e.mumber фото 3 штуки
+                            +e.content
+                                +e.item
+                                    +e.info--prev
+                                        +e.A.name(href="#") Кровать с мягким изголовьем
+                                        +e.header
+                                            +e.title Артикул:
+                                            +e.text 4614/TL1
+                                    +e.info--main
+                                        +e.info--cell.mobille
+                                            +e.header
+                                                +e.title Артикул:
+                                                +e.text 4614/TL1
+                                        +e.info--cell
+                                            +e.header
+                                                +e.title Коллекция: 
+                                                +e.text 113-223
+                                        +e.info--cell
+                                            +e.header
+                                                +e.title Размер: 
+                                                +e.text –
+                                        +e.info--cell
+                                            +e.header
+                                                +e.title Товар: 
+                                                +e.A.text.link(href="#") В наличии
+                                        +e.info--cell
+                                            +e.header
+                                                +e.title Стоимость:
+                                                +e.text от 262 475 ₽
+                                        +e.info--button
+                                            +b.button._type_primary В КОРЗИНУ
+                                +e.item
+                                    +e.info--prev
+                                        +e.A.name(href="#")  Кровать с мягким изголовьем
+                                        +e.header
+                                            +e.title Артикул:
+                                            +e.text 4614/TL1
+                                    +e.info--main
+                                        +e.info--cell.mobille
+                                            +e.header
+                                                +e.title Артикул:
+                                                +e.text 4614/TL1
+                                        +e.info--cell
+                                            +e.header
+                                                +e.title Коллекция: 
+                                                +e.text 113-223
+                                        +e.info--cell
+                                            +e.header
+                                                +e.title Размер: 
+                                                +e.text –
+                                        +e.info--cell
+                                            +e.header
+                                                +e.title Товар: 
+                                                +e.A.text.link(href="#") В наличии
+                                        +e.info--cell
+                                            +e.header
+                                                +e.title Стоимость:
+                                                +e.text от 262 475 ₽
+                                        +e.info--button
+                                            +b.button._type_primary В КОРЗИНУ
+                        +b.product-card
+                            +e.image
+                                img(src="/static/img/assets/slider/slider-product--min.png", alt="")
+                                +e.mumber фото 3 штуки
+                            +e.content
+                                +e.item
+                                    +e.info--prev
+                                        +e.A.name(href="#") Кровать с мягким изголовьем
+                                        +e.header
+                                            +e.title Артикул:
+                                            +e.text 4614/TL1
+                                    +e.info--main
+                                        +e.info--cell.mobille
+                                            +e.header
+                                                +e.title Артикул:
+                                                +e.text 4614/TL1
+                                        +e.info--cell
+                                            +e.header
+                                                +e.title Коллекция: 
+                                                +e.text 113-223
+                                        +e.info--cell
+                                            +e.header
+                                                +e.title Размер: 
+                                                +e.text –
+                                        +e.info--cell
+                                            +e.header
+                                                +e.title Товар: 
+                                                +e.A.text.link(href="#") В наличии
+                                        +e.info--cell
+                                            +e.header
+                                                +e.title Стоимость:
+                                                +e.text от 262 475 ₽
+                                        +e.info--button
+                                            +b.button._type_primary В КОРЗИНУ
+                                +e.item
+                                    +e.info--prev
+                                        +e.A.name(href="#") Кровать с мягким изголовьем
+                                        +e.header
+                                            +e.title Артикул:
+                                            +e.text 4614/TL1
+                                    +e.info--main
+                                        +e.info--cell
+                                            +e.header
+                                                +e.title Коллекция: 
+                                                +e.text 113-223
+                                        +e.info--cell
+                                            +e.header
+                                                +e.title Размер: 
+                                                +e.text –
+                                        +e.info--cell
+                                            +e.header
+                                                +e.title Товар: 
+                                                +e.A.text.link(href="#") В наличии
+                                        +e.info--cell
+                                            +e.header
+                                                +e.title Стоимость:
+                                                +e.text от 262 475 ₽
+                                        +e.info--button
+                                            +b.button._type_primary В КОРЗИНУ
+
+        +footer()
+
+        script(src='%=static=%js/separate-js/svg4everybody.min.js')
+
+        //- Main scripts. You can replace it, but I recommend you to leave it here
+        script(src='%=static=%js/main%=hash=%%=min=%.js')
