@@ -7,10 +7,10 @@
         justify-content: space-between;
         align-items: center;
         height: 120px;
+        max-width: 1030px !important;
     }
 
     &__left {
-        margin-left: 8.6%;
         margin-top: 5px;
     }
 
@@ -19,7 +19,7 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding: 0 150px;
+        padding: 0 112px;
 
         .header__icon-box {
             position: absolute;
@@ -34,13 +34,14 @@
         }
 
         .header__icon-name {
-            display: inline-block;
-            margin-bottom: 5px;
+            display: block;
+            margin-bottom: 10px;
             font-size: 15px;
         }
 
         .header__icon {
             font-size: 30px;
+            color: #FCFCFB;
 
             &_search {
             }
@@ -49,7 +50,6 @@
                 position: relative;
 
                 &-count {
-                    position: absolute;
                     width: 24px;
                     height: 24px;
                     border-radius: 50%;
@@ -62,9 +62,7 @@
             }
         }
     }
-
     &__right {
-        margin-right: 8.6%;
         margin-top: 5px;
     }
 
