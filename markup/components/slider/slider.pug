@@ -14,7 +14,7 @@ mixin slider(params)
                         +e.navigation-item(data-tab="2") Классика
             -
                 var classList = 'list_'+params.type + ' owl-carousel';
-            +e(class=classList)(data-carousel= params.carousel)
+            +e(class=classList data-carousel= params.carousel)
                 each item in params.elements
                     case params.type
                         when 'main'
