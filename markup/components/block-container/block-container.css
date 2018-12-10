@@ -10,15 +10,28 @@
 .block-container__header .button {
   margin-left: 7px;
 }
+@media (max-width: 772px) {
+  .block-container__header {
+    margin-bottom: 20px;
+  }
+}
 @media (max-width: 639px) {
   .block-container__header {
     flex-wrap: wrap;
     height: auto;
   }
+  .block-container__header .button {
+    margin-left: 0;
+    padding: 0;
+    width: 100%;
+    margin-right: 5px;
+    font-size: 12px;
+  }
 }
 @media (max-width: 639px) {
   .block-container__navigation {
     margin-bottom: 20px;
+    width: 100%;
   }
 }
 .block-container__title {
@@ -45,5 +58,10 @@
     line-height: 21px;
     font-size: 18px;
     text-transform: uppercase;
+  }
+}
+@media (max-width: 639px) {
+  .block-container .button-group {
+    width: 100%;
   }
 }

@@ -26,9 +26,14 @@
     }
     &__list{
         @media (max-width:  767px) {
-            display: none;
+            max-height: 0;
+            overflow: hidden;
+            padding-left: 40px;
             &.active{
                 display: block;
+                margin-top: 12px;
+                max-height: none;
+                overflow: hidden;
             }
         }
     }
@@ -46,6 +51,12 @@
             margin-bottom: 24px;
             line-height: 37px;
             position: relative;
+            &.active{
+                background: #584C50;
+                &::after{
+                    transform: translateY(-50%) rotate(-90deg);
+                }
+            }
             &::after{
                 content: '';
                 position: absolute;
@@ -53,8 +64,9 @@
                 top: 50%;
                 width: 8.5px;
                 height: 17px;
-                background: #000000;
+                background-image: url(../img/assets/icon/arrow_f.svg);
                 transform: translateY(-50%);
+                transition: all .4s;
             }
         }
         @media (max-width:  639px) {
@@ -122,6 +134,7 @@
         }
         @media (max-width:  639px) {
             margin-bottom: 42px;
+            margin-left: 0;
         }
         .icon{
             width: 14px;
@@ -161,7 +174,8 @@
         @media (max-width:  639px) {
            width: 100%;
            padding-left: 30px;
-           padding-top: 62px;
+           margin-top: 30px;
+           padding-top: 30px;
         }
     }
     &__contacts--text-ghost{
