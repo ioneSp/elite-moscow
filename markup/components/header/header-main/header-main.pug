@@ -1,0 +1,29 @@
+mixin header-main
+    +b.header-main
+        +e.box.section__box
+            +e.left
+                +b.header__phone
+                    +icon({semantic: 'phone'})
+                    +e.phone-number
+                        | 8 (495)
+                        strong  783-97-33
+                    +e.phone-description Часы работы 10:00 21:00 МСК
+            +e.center
+                +b.header__icon-box_search
+                    +e.SPAN.icon-name Поиск
+                    +e.icon_search
+                        +icon({semantic: 'search'})
+                +e.logo
+                    img(src="static/img/assets/header/header-main/logo.svg")
+                +b.header__icon-box_cart
+                    +e.SPAN.icon-name Корзина
+                    +e.icon_cart
+                        +icon({semantic: 'cart'})
+                    +e.icon_cart-count 3
+            +e.right
+                +b.header__phone
+                    +icon({semantic: 'phone'})
+                    +e.phone-number
+                        | 8 (495)
+                        strong  783-97-33
+                    +e.phone-description Часы работы 10:00 21:00 МСК
