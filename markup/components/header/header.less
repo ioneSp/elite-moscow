@@ -1,16 +1,24 @@
 .header {
+    &__main--basket {
+        display: flex;
+    }
+
     &__phone {
         position: relative;
         color: #ffffff;
         padding-left: 27px;
+
         &-number {
             font-size: 21px;
             margin-bottom: 5px;
             margin-top: 5px;
         }
+
         &-description {
             font-size: 13px;
         }
+
+
         .icon {
             position: absolute;
             top: 0;
@@ -26,8 +34,24 @@
             text-align: center;
             color: #c0aa70;
         }
+
         &-name {
 
         }
+        &_card{
+
+        }
     }
+}
+.ui.menu .menu ._border{
+    &:before{
+        display: none;
+    }
+}
+.header__icon_cart{
+    font-size: 25px !important;
+    margin-right: 6px;
+}
+.header__icon-box{
+    color: #fff
 }
