@@ -33,10 +33,15 @@
 }
 @media (max-width: 767px) {
   .footer__list {
-    display: none;
+    max-height: 0;
+    overflow: hidden;
+    padding-left: 40px;
   }
   .footer__list.active {
     display: block;
+    margin-top: 12px;
+    max-height: none;
+    overflow: hidden;
   }
 }
 .footer__content,
@@ -56,6 +61,12 @@
     line-height: 37px;
     position: relative;
   }
+  .footer__header.active {
+    background: #584C50;
+  }
+  .footer__header.active::after {
+    transform: translateY(-50%) rotate(-90deg);
+  }
   .footer__header::after {
     content: '';
     position: absolute;
@@ -63,13 +74,15 @@
     top: 50%;
     width: 8.5px;
     height: 17px;
-    background: #000000;
+    background-image: url(../img/assets/icon/arrow_f.svg);
     transform: translateY(-50%);
+    transition: all .4s;
   }
 }
 @media (max-width: 639px) {
   .footer__header {
     line-height: 58px;
+    padding-left: 30px;
     margin-bottom: 4px;
   }
   .footer__header:hover {
@@ -83,6 +96,8 @@
 @media (max-width: 639px) {
   .footer__column-content {
     padding-left: 30px;
+    padding-left: 0;
+    margin-left: 0;
   }
 }
 .footer__content {
@@ -142,6 +157,7 @@
 @media (max-width: 639px) {
   .footer__contacts--item {
     margin-bottom: 42px;
+    margin-left: 0;
   }
 }
 .footer__contacts--item .icon {
@@ -187,7 +203,8 @@
   .footer__contacts {
     width: 100%;
     padding-left: 30px;
-    padding-top: 62px;
+    margin-top: 30px;
+    padding-top: 30px;
   }
 }
 .footer__contacts--text-ghost {

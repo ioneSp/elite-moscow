@@ -9,6 +9,7 @@
   right: 0;
   bottom: 25px;
   padding-left: 22px;
+  transition: all .4s;
 }
 .entry__item {
   width: 33.3333%;
@@ -31,6 +32,9 @@
   left: 0;
   bottom: 0;
   background: linear-gradient(180deg, rgba(77, 65, 69, 0) 0%, rgba(2, 2, 2, 0.75) 68.37%);
+}
+.entry__item-box:hover .entry__info {
+  bottom: 35px;
 }
 .entry__item--date {
   line-height: normal;
