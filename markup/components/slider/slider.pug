@@ -1,0 +1,44 @@
+include ../card/card
+include ../brand-card/brand-card
+mixin slider(params)
+    -
+        var name_block = 'slider',
+        currentClass = name_block;
+        if('type' in params && params.type.length) currentClass = name_block+'_'+params.type;
+    +b.DIV(class= currentClass)
+        if(params.elements)
+            if(params.type === 'main')
+                +e.header
+                    +e.navigation
+                        +e.navigation-item(data-tab="3") Современный
+                        +e.navigation-item(data-tab="2") Классика
+            -
+                var classList = 'list_'+params.type + ' owl-carousel';
+            +e(class=classList data-carousel= params.carousel)
+                each item in params.elements
+                    case params.type
+                        when 'main'
+                            +e.item
+                                img(src='../static/img/assets/slider/main.jpg' alt='')
+                                +e.item-box
+                                    +e.item-info
+                                        +e.item-logo
+                                            img(src='../static/img/assets/slider/logo.png' alt='')
+                                        +e.item-title Интерьеры италии
+                                        +e.item-description
+                                            | Кухни CESAR. Официальный
+                                            br
+                                            | диллер по России и странам СНГ
+                                        +e.item-btn
+                                            +button({text: 'Подробнее', theme: ''})
+                                    +e.item-view
+                                        +e.item-add-image
+                                            img(src='../static/img/assets/slider/add.jpg' alt='')
+                        when 'brand'
+                            +brand-card()
+                        when 'card-brand'
+                            +card({label_mod: 'yellow'})
+                        when 'card'
+                            +card({label_mod: 'red'})
+                        when 'entry'
+                            +entry()
