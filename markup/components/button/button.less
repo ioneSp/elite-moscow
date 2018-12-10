@@ -1,13 +1,35 @@
-/*.button {
-    display: block;
-    height: 100%;
-    width: 100%;
-    outline: none;
+.button {
+    height: 28px;
+    border-radius: 4px;
+    padding: 0 20px;
+
+    &:first-of-type {
+        margin-left: 0;
+    }
+
+    &:last-of-type {
+        margin-right: 0;
+    }
+
+    background: #ddd;
+
+    text-align: center;
+    white-space: nowrap;
+
+    font-size: 14px;
+
+    outline: transparent;
     border: none;
-    background: transparent;
     box-shadow: none;
+
+    transition: all 0.25s ease-in-out;
     cursor: pointer;
-    min-height: 32px;
+
+    &:hover,
+    &.active {
+        background: #4d4145;
+        color: #fff;
+    }
 
     &:before {
         content: '';
@@ -18,152 +40,57 @@
         vertical-align: middle;
         text-align: center;
     }
+
     &__text {
         display: inline-block;
         vertical-align: middle;
         font: inherit;
         color: inherit;
+        text-transform: inherit;
     }
 
-    &_theme{
-        &_default {
+    &.button {
+        &_type {
+            &_primary {
+                background: transparent;
+                height: 32px;
+                padding: 0 30px;
+                border-radius: 30px;
+                border: 1px solid #BFA96A;
+                text-transform: uppercase;
 
+                &.active,
+                &:hover {
+                    background: #BFA96A;
+                    color: #ffffff;
+                }
+            }
         }
-        &_gray {
 
+        &_theme {
+            &_light {
+                background: transparent;
+                border: 1px solid #BFA96A;
+                color: #434343;
+            }
         }
-        &_light{
-            border-radius: 30px;
-            border: 1px solid #A39134;
-            box-sizing: border-box;
-            text-align: center;
-            transition: all .2s;
-            color: #434343;
-            &:hover{
-                background: #bca153;
+
+
+        &_mod {
+            &_card {
+                width: 100%;
+                max-width: 160px;
+                margin: 0 auto;
+            }
+
+            &_banner {
+                width: 100%;
+                max-width: 116px;
+                background: transparent;
                 color: #fff;
+                border: 1px solid #fff;
+                height: 36px;
             }
         }
     }
-
-    &_mod {
-        &_card {
-            width: 160px;
-        }
-        &_nav {
-            padding: 0 20px;
-            text-align: center;
-            white-space: nowrap;
-            background: #ddd;
-            border-radius: 4px;
-            height: 28px;
-            min-height: 0;
-            font-size: 14px;
-            margin-left: 5px;
-            &:first-of-type {margin-left: 0;}
-            &:last-of-type {margin-right: 0;}
-            &.active {
-                background-color: #4D4145;
-                color: #fff;
-            }
-        }
-    }
-}*/
-
-
-.button {
-  height: 28px;
-  border-radius: 4px;
-  padding: 0 20px;
-
-  &:first-of-type {
-    margin-left: 0;
-  }
-
-  &:last-of-type {
-    margin-right: 0;
-  }
-
-  background: #ddd;
-
-  text-align: center;
-  white-space: nowrap;
-
-  font-size: 14px;
-
-  outline: transparent;
-  border: none;
-  box-shadow: none;
-
-  transition: all 0.25s ease-in-out;
-  cursor: pointer;
-
-  &:hover,
-  &.active {
-    background: #4d4145;
-    color: #fff;
-  }
-
-  &:before {
-    content: '';
-    display: inline-block;
-    height: 100%;
-    width: 1px;
-    margin-right: -1px;
-    vertical-align: middle;
-    text-align: center;
-  }
-
-  &__text {
-    display: inline-block;
-    vertical-align: middle;
-    font: inherit;
-    color: inherit;
-    text-transform: inherit;
-  }
-
-  &.button {
-    &_type {
-      &_primary {
-        background: transparent;
-        height: 32px;
-        padding: 0 30px;
-        border-radius: 30px;
-        border: 1px solid #BFA96A;
-        text-transform: uppercase;
-
-        &.active,
-        &:hover {
-          background: #BFA96A;
-          color: #ffffff;
-        }
-      }
-    }
-
-    &_theme {
-      &_light {
-        background: transparent;
-        border: 1px solid #BFA96A;
-        color: #434343;
-      }
-    }
-
-
-    &_mod {
-      &_card {
-        width: 100%;
-        max-width: 160px;
-        margin: 0 auto;
-      }
-
-      &_banner {
-        width: 100%;
-        max-width: 116px;
-        background: transparent;
-        color: #fff;
-        border: 1px solid #fff;
-        height: 36px;
-      }
-    }
-  }
 }

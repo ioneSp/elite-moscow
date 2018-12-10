@@ -1,101 +1,117 @@
 .filter-section {
-  &__header {
-    height: 50px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    color: #BFA96A;
-    text-transform: uppercase;
-    font-size: 16px;
-    padding: 0 20px 0 14px;
-    border: solid #f1f1f1;
-    border-width: 1px 2px;
-    border-left-color: #fff;
-    border-right-color: #fff;
-    border-bottom-color: transparent;
-    cursor: pointer;
-    transition: all 0.25s ease-in-out;
-    &-arrow {
-      use {
-        stroke: #434343;
-      }
-    }
-    &.open {
-      background: #f1f1f1;
-      border-color: #f1f1f1;
-      .filter-section__header {
-        &-arrow {
-          transform: rotate(90deg);
-          use {
-            stroke: #BFA96A
-          }
-        }
-      }
-
-      & + .filter-section {
-
-        &__main {
-          display: block;
-        }
-      }
-    }
-  }
-  &:last-of-type {
-    .filter-section__header {
-      border-bottom-color: #f1f1f1;
-    }
-  }
-  &__main {
-    display: none;
-    padding: 8px 5px 12px 15px;
-  }
-  &__more-list {
-    display: none;
-    &.open {
-      display: block;
-    }
-  }
-  &__more-btn {
-    padding-top: 12px;
-    display: inline-block;
-    border-bottom: 1px dotted;
-    cursor: pointer;
-  }
-  &__element {
-    padding: 5px 0;
-    font-size: 16px;
-    color: #434343;
-    .ui.checkbox {
-      label {
-        padding-left: 24px;
+    &__header {
+        height: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        color: #BFA96A;
+        text-transform: uppercase;
+        font-size: 16px;
+        padding: 0 20px 0 14px;
+        border: solid #f1f1f1;
+        border-width: 1px 2px;
+        border-left-color: #fff;
+        border-right-color: #fff;
+        border-bottom-color: transparent;
         cursor: pointer;
-      }
-      input[type=checkbox] {
-        width: 16px;
-        height: 16px;
-        border-radius: 2px;
-        border-color: #E2E2E2;
-        & ~ label:before {
-          width: 16px;
-          height: 16px;
-          border-radius: 2px;
-          border-color: #E2E2E2;
+        transition: all 0.25s ease-in-out;
+
+        &-arrow {
+            use {
+                stroke: #434343;
+            }
         }
-        & ~ label:after {
-          width: 16px;
-          height: 16px;
-          font-size: 10px;
-          color: #000000;
+
+        &.open {
+            background: #f1f1f1;
+            border-color: #f1f1f1;
+
+            .filter-section__header {
+                &-arrow {
+                    transform: rotate(90deg);
+
+                    use {
+                        stroke: #BFA96A
+                    }
+                }
+            }
+
+            & + .filter-section {
+
+                &__main {
+                    display: block;
+                }
+            }
         }
-        &:checked {
-          background: #FFEBA0;
-          border-color: #F1F1F1;
-          & ~ label:before {
-            background: #FFEBA0;
-            border-color: #F1F1F1;
-          }
-        }
-      }
     }
-  }
+
+    &:last-of-type {
+        .filter-section__header {
+            border-bottom-color: #f1f1f1;
+        }
+    }
+
+    &__main {
+        display: none;
+        padding: 8px 5px 12px 15px;
+    }
+
+    &__more-list {
+        display: none;
+
+        &.open {
+            display: block;
+        }
+    }
+
+    &__more-btn {
+        padding-top: 12px;
+        display: inline-block;
+        border-bottom: 1px dotted;
+        cursor: pointer;
+    }
+
+    &__element {
+        padding: 5px 0;
+        font-size: 16px;
+        color: #434343;
+
+        .ui.checkbox {
+            label {
+                padding-left: 24px;
+                cursor: pointer;
+            }
+
+            input[type=checkbox] {
+                width: 16px;
+                height: 16px;
+                border-radius: 2px;
+                border-color: #E2E2E2;
+
+                & ~ label:before {
+                    width: 16px;
+                    height: 16px;
+                    border-radius: 2px;
+                    border-color: #E2E2E2;
+                }
+
+                & ~ label:after {
+                    width: 16px;
+                    height: 16px;
+                    font-size: 10px;
+                    color: #000000;
+                }
+
+                &:checked {
+                    background: #FFEBA0;
+                    border-color: #F1F1F1;
+
+                    & ~ label:before {
+                        background: #FFEBA0;
+                        border-color: #F1F1F1;
+                    }
+                }
+            }
+        }
+    }
 }

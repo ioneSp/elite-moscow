@@ -1,23 +1,27 @@
-.tabs{
-    
+.tabs {
+
     border: 1px solid rgba(0, 0, 0, 0.15);
-    border-top: 0; 
+    border-top: 0;
     margin-bottom: 20px;
-    &__nav{
+
+    &__nav {
         display: flex;
         align-items: center;
         justify-content: center;
     }
-    &__content{
+
+    &__content {
         background: #fff;
         padding: 30px;
-        p{
+
+        p {
             line-height: 21px;
             font-size: 14px;
             color: #434343;
         }
     }
-    &__item{
+
+    &__item {
         height: 46px;
         background: #DAD6D7;
         line-height: normal;
@@ -30,7 +34,8 @@
         line-height: 46px;
         margin-right: 1px;
         position: relative;
-        &:after{
+
+        &:after {
             height: 0;
             content: '';
             position: absolute;
@@ -41,13 +46,16 @@
             background: #BFA96A;
 
         }
-        &:last-child{
+
+        &:last-child {
             margin-right: 0;
         }
-        &.active{
+
+        &.active {
             margin-right: 0;
             background: #fff;
-            &:after{
+
+            &:after {
                 height: 4px;
             }
         }
