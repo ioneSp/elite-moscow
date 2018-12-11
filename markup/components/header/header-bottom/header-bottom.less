@@ -9,6 +9,7 @@
     }
 
     &__box {
+        z-index: 9999!important;
         &:not(.fixed) {
             .ui.menu {
                 box-shadow: none;
@@ -273,5 +274,16 @@
     }
     .header__phone-description{
         font-size: 11px;
+    }
+}
+@media (max-width: 768px){
+    .header-bottom {
+        background: transparent;
+        &__box {
+            &:not(.fixed) {
+                opacity: 0;
+                pointer-events: none;
+            }
+        }
     }
 }

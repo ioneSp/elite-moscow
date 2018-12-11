@@ -1,6 +1,8 @@
 'use strict';
 $('.ui.dropdown').dropdown();
-$('.header-bottom__box').sticky();
+$('.header-bottom__box').sticky({
+    context: '.page'
+});
 $('.header-bottom .item.cart').popup({
     popup: '.cart.popup',
     position: 'bottom right',
