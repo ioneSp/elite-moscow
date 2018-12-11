@@ -20,252 +20,253 @@ html(class="no-js", lang="ru")
     body.page
         | %=symbols=%
         +header()
-        +slider({
-            type: 'main',
-            elements: [{},{}]
-        })
-        +b.section
-            +e.box
-                +block-container({
-                    title: 'Итальянская мебель',
-                    headerButtons: [
-                        {
-                            text: 'Все стили',
-                            active: true,
-                            data: {
-                                'data-tab': 'all'
-                            }
-                        },
-                        {
-                            text: 'Классика',
-                            data: {
-                                'data-tab': 'classic'
-                            }
-                        },
-                        {
-                            text: 'Современный',
-                            data: {
-                                'data-tab': 'modern'
-                            }
-                        }
-                    ]
-                })
-                    +grid-categories()
-        +b.promo._type_main.section
-            .section__box
-                +b.row
-                    .col-xs-12.col-md-6
-                        .promo__content
-                            .promo__header
-                                .promo__title МЕБЕЛЬ ИЗ ИТАЛИИ — ЛУЧШИЙ ВЫБОР В СОЗДАНИИ СОВРЕМЕННОГО ИНТЕРЬЕРА
-                            .promo__description
-                                p   Вот уже много веков Италия является крупнейшим в мире производителем элитной мебели, лидером сегмента мебели премиум-класса, родоначальником различных направлений мебельного искусства, законодателем моды и инновационного дизайна.
-                                p.more(id="more")   Вот уже много веков Италия является крупнейшим в мире производителем элитной мебели, лидером сегмента мебели премиум-класса, родоначальником различных направлений мебельного искусства, законодателем моды и инновационного дизайна.
-                                a.read-more(href="more").link.read-more Читать полностью
-                        .promo__info
-                            .promo__info--cell
-                                .promo__info--number
-                                    span.spincrement 280
-                                    span +
-                                .promo__info--text
-                                    | мебельных
-                                    br
-                                    | брендов
-                            .promo__info--cell
-                                .promo__info--number 10
-                                .promo__info--text
-
-                                    | лет на рынке
-                                    br
-                                    | мебели
-                            .promo__info--cell
-                                .promo__info--text
-                                    | ДОСТАВКА
-                                    br
-                                    | ПО ВСЕЙ
-                                    br
-                                    | РОСИИ И
-                                    br
-                                    | СТРАНАМ СНГ
-        +b.section
-            +e.box
-                +block-container({
-                    title: 'Специальное предложение',
-                    headerLink: {name: 'Смотреть все', href: '/'}
-                })
-                    +slider({
-                        type: 'card',
-                        elements: [
+        +b.main
+            +slider({
+                type: 'main',
+                elements: [{},{}]
+            })
+            +b.section
+                +e.box
+                    +block-container({
+                        title: 'Итальянская мебель',
+                        headerButtons: [
                             {
-                                label: 'Акция - 56%',
-                                label_mod: 'red',
-                                image: 'product.jpg',
-                                stars: true,
-                                code: 'Композиция: 133-072',
-                                name: 'Журнальные столики и пуфы коллекции Philipp фабрики Selva',
-                                price: 'от 234 567 ₽',
-                                availab: 'В наличии'
+                                text: 'Все стили',
+                                active: true,
+                                data: {
+                                    'data-tab': 'all'
+                                }
                             },
                             {
-                                label: 'Акция - 56%',
-                                label_mod: 'red',
-                                image: 'product.jpg',
-                                stars: true,
-                                code: 'Композиция: 133-072',
-                                name: 'Журнальные столики и пуфы коллекции Philipp фабрики Selva',
-                                price: 'от 234 567 ₽',
-                                availab: 'В наличии'
+                                text: 'Классика',
+                                data: {
+                                    'data-tab': 'classic'
+                                }
                             },
                             {
-                                label: 'Акция - 56%',
-                                label_mod: 'red',
-                                image: 'product.jpg',
-                                stars: true,
-                                code: 'Композиция: 133-072',
-                                name: 'Журнальные столики и пуфы коллекции Philipp фабрики Selva',
-                                price: 'от 234 567 ₽',
-                                availab: 'В наличии'
-                            },
-                            {
-                                label: 'Акция - 56%',
-                                label_mod: 'red',
-                                image: 'product.jpg',
-                                stars: true,
-                                code: 'Композиция: 133-072',
-                                name: 'Журнальные столики и пуфы коллекции Philipp фабрики Selva',
-                                price: 'от 234 567 ₽',
-                                availab: 'В наличии'
-                            },
-                            {
-                                label: 'Акция - 56%',
-                                label_mod: 'red',
-                                image: 'product.jpg',
-                                stars: true,
-                                code: 'Композиция: 133-072',
-                                name: 'Журнальные столики и пуфы коллекции Philipp фабрики Selva',
-                                price: 'от 234 567 ₽',
-                                availab: 'В наличии'
+                                text: 'Современный',
+                                data: {
+                                    'data-tab': 'modern'
+                                }
                             }
                         ]
                     })
+                        +grid-categories()
+            +b.promo._type_main.section
+                .section__box
+                    +b.row
+                        .col-xs-12.col-md-6
+                            .promo__content
+                                .promo__header
+                                    .promo__title МЕБЕЛЬ ИЗ ИТАЛИИ — ЛУЧШИЙ ВЫБОР В СОЗДАНИИ СОВРЕМЕННОГО ИНТЕРЬЕРА
+                                .promo__description
+                                    p   Вот уже много веков Италия является крупнейшим в мире производителем элитной мебели, лидером сегмента мебели премиум-класса, родоначальником различных направлений мебельного искусства, законодателем моды и инновационного дизайна.
+                                    p.more(id="more")   Вот уже много веков Италия является крупнейшим в мире производителем элитной мебели, лидером сегмента мебели премиум-класса, родоначальником различных направлений мебельного искусства, законодателем моды и инновационного дизайна.
+                                    a.read-more(href="more").link.read-more Читать полностью
+                            .promo__info
+                                .promo__info--cell
+                                    .promo__info--number
+                                        span.spincrement 280
+                                        span +
+                                    .promo__info--text
+                                        | мебельных
+                                        br
+                                        | брендов
+                                .promo__info--cell
+                                    .promo__info--number 10
+                                    .promo__info--text
 
-        +b.section
-            +e.box
-                +block-container({
-                    title: 'Популярные модели',
-                    headerLink: {name: 'Смотреть все',href: '/'}
-                })
-                    +slider({
-                        type: 'card',
-                        elements: [
-                            {
-                                label: 'Акция - 56%',
-                                label_mod: 'yellow',
-                                image: 'product.jpg',
-                                stars: true,
-                                code: 'Композиция: 133-072',
-                                name: 'Журнальные столики и пуфы коллекции Philipp фабрики Selva',
-                                price: 'от 234 567 ₽',
-                                availab: 'В наличии'
-                            },
-                            {
-                                label: 'Акция - 56%',
-                                label_mod: 'yellow',
-                                image: 'product.jpg',
-                                stars: true,
-                                code: 'Композиция: 133-072',
-                                name: 'Журнальные столики и пуфы коллекции Philipp фабрики Selva',
-                                price: 'от 234 567 ₽',
-                                availab: 'В наличии'
-                            },
-                            {
-                                label: 'Акция - 56%',
-                                label_mod: 'yellow',
-                                image: 'product.jpg',
-                                stars: true,
-                                code: 'Композиция: 133-072',
-                                name: 'Журнальные столики и пуфы коллекции Philipp фабрики Selva',
-                                price: 'от 234 567 ₽',
-                                availab: 'В наличии'
-                            },
-                            {
-                                label: 'Акция - 56%',
-                                label_mod: 'yellow',
-                                image: 'product.jpg',
-                                stars: true,
-                                code: 'Композиция: 133-072',
-                                name: 'Журнальные столики и пуфы коллекции Philipp фабрики Selva',
-                                price: 'от 234 567 ₽',
-                                availab: 'В наличии'
-                            },
-                            {
-                                label: 'Акция - 56%',
-                                label_mod: 'yellow',
-                                image: 'product.jpg',
-                                stars: true,
-                                code: 'Композиция: 133-072',
-                                name: 'Журнальные столики и пуфы коллекции Philipp фабрики Selva',
-                                price: 'от 234 567 ₽',
-                                availab: 'В наличии'
-                            }
-                        ]
+                                        | лет на рынке
+                                        br
+                                        | мебели
+                                .promo__info--cell
+                                    .promo__info--text
+                                        | ДОСТАВКА
+                                        br
+                                        | ПО ВСЕЙ
+                                        br
+                                        | РОСИИ И
+                                        br
+                                        | СТРАНАМ СНГ
+            +b.section
+                +e.box
+                    +block-container({
+                        title: 'Специальное предложение',
+                        headerLink: {name: 'Смотреть все', href: '/'}
                     })
-
-        +b.section
-            +e.box
-                +block-container({
-                    title: 'Популярные бренды',
-                    headerLink: {name: 'Смотреть все', href: '/'}
-                })
-                    +slider({
-                        type: 'brand',
-                        elements: [{},{},{},{},{},{},{},{},{}]
-                    })
-        +b.section
-            +e.box
-                +block-container({
-                    title: 'Новости',
-                    headerLink: {name: 'Смотреть все', href: '/'}
-                })
-                    +slider({
-                        type: 'entry',
-                        elements: [{},{},{},{},{}],
-                        carousel: {
-                            margin:20,
-                            nav:false,
-                            items:1,
-                            items1200:1
-                        }
-                    })
-        +b.promo._type_offer
-            .row
-                .col-md-6.promo__col--mobile
-                    .promo__col
-                        .promo__container
-                            +e.header
-                                | Закажите дизайн
-                                br
-                                | интерьера под ключ
-                            .row
-                                .col-xs-6
-                                    +e.description  Помощь в подборке мебели и предметов интерьера.
-                                .col-xs-6
-                                    +e.description  От интерьеров среднего уровня, до интерьеров класса LUXURY.
-                            +e.button
-                                +b.A.button._type_primary(href="#")
-                                    +e.text ПОЛУЧИТЬ ПРЕДЛОЖЕНИЕ
-                .col-md-6(style="background-image: url(/static/img/assets/promo/promo_type_offer.png)")
-        +b.promo._type_order.section(style="background-image: url(/static/img/assets/promo/promo_type_order.jpg)")
-            .section__box
-                +e.content
-                    +e.header ИЩИТЕ ЛУЧШУЮ СТОИМОСТЬ?
-                    +e.description Напишите  нам название интересующего Вас товара. Сравните цены. Получите самое выгодное предложение
-                    +e.button
-                        +button({
-                            text: 'получить предложение',
-                            type: 'primary',
-                            link: '#'
+                        +slider({
+                            type: 'card',
+                            elements: [
+                                {
+                                    label: 'Акция - 56%',
+                                    label_mod: 'red',
+                                    image: 'product.jpg',
+                                    stars: true,
+                                    code: 'Композиция: 133-072',
+                                    name: 'Журнальные столики и пуфы коллекции Philipp фабрики Selva',
+                                    price: 'от 234 567 ₽',
+                                    availab: 'В наличии'
+                                },
+                                {
+                                    label: 'Акция - 56%',
+                                    label_mod: 'red',
+                                    image: 'product.jpg',
+                                    stars: true,
+                                    code: 'Композиция: 133-072',
+                                    name: 'Журнальные столики и пуфы коллекции Philipp фабрики Selva',
+                                    price: 'от 234 567 ₽',
+                                    availab: 'В наличии'
+                                },
+                                {
+                                    label: 'Акция - 56%',
+                                    label_mod: 'red',
+                                    image: 'product.jpg',
+                                    stars: true,
+                                    code: 'Композиция: 133-072',
+                                    name: 'Журнальные столики и пуфы коллекции Philipp фабрики Selva',
+                                    price: 'от 234 567 ₽',
+                                    availab: 'В наличии'
+                                },
+                                {
+                                    label: 'Акция - 56%',
+                                    label_mod: 'red',
+                                    image: 'product.jpg',
+                                    stars: true,
+                                    code: 'Композиция: 133-072',
+                                    name: 'Журнальные столики и пуфы коллекции Philipp фабрики Selva',
+                                    price: 'от 234 567 ₽',
+                                    availab: 'В наличии'
+                                },
+                                {
+                                    label: 'Акция - 56%',
+                                    label_mod: 'red',
+                                    image: 'product.jpg',
+                                    stars: true,
+                                    code: 'Композиция: 133-072',
+                                    name: 'Журнальные столики и пуфы коллекции Philipp фабрики Selva',
+                                    price: 'от 234 567 ₽',
+                                    availab: 'В наличии'
+                                }
+                            ]
                         })
+
+            +b.section
+                +e.box
+                    +block-container({
+                        title: 'Популярные модели',
+                        headerLink: {name: 'Смотреть все',href: '/'}
+                    })
+                        +slider({
+                            type: 'card',
+                            elements: [
+                                {
+                                    label: 'Акция - 56%',
+                                    label_mod: 'yellow',
+                                    image: 'product.jpg',
+                                    stars: true,
+                                    code: 'Композиция: 133-072',
+                                    name: 'Журнальные столики и пуфы коллекции Philipp фабрики Selva',
+                                    price: 'от 234 567 ₽',
+                                    availab: 'В наличии'
+                                },
+                                {
+                                    label: 'Акция - 56%',
+                                    label_mod: 'yellow',
+                                    image: 'product.jpg',
+                                    stars: true,
+                                    code: 'Композиция: 133-072',
+                                    name: 'Журнальные столики и пуфы коллекции Philipp фабрики Selva',
+                                    price: 'от 234 567 ₽',
+                                    availab: 'В наличии'
+                                },
+                                {
+                                    label: 'Акция - 56%',
+                                    label_mod: 'yellow',
+                                    image: 'product.jpg',
+                                    stars: true,
+                                    code: 'Композиция: 133-072',
+                                    name: 'Журнальные столики и пуфы коллекции Philipp фабрики Selva',
+                                    price: 'от 234 567 ₽',
+                                    availab: 'В наличии'
+                                },
+                                {
+                                    label: 'Акция - 56%',
+                                    label_mod: 'yellow',
+                                    image: 'product.jpg',
+                                    stars: true,
+                                    code: 'Композиция: 133-072',
+                                    name: 'Журнальные столики и пуфы коллекции Philipp фабрики Selva',
+                                    price: 'от 234 567 ₽',
+                                    availab: 'В наличии'
+                                },
+                                {
+                                    label: 'Акция - 56%',
+                                    label_mod: 'yellow',
+                                    image: 'product.jpg',
+                                    stars: true,
+                                    code: 'Композиция: 133-072',
+                                    name: 'Журнальные столики и пуфы коллекции Philipp фабрики Selva',
+                                    price: 'от 234 567 ₽',
+                                    availab: 'В наличии'
+                                }
+                            ]
+                        })
+
+            +b.section
+                +e.box
+                    +block-container({
+                        title: 'Популярные бренды',
+                        headerLink: {name: 'Смотреть все', href: '/'}
+                    })
+                        +slider({
+                            type: 'brand',
+                            elements: [{},{},{},{},{},{},{},{},{}]
+                        })
+            +b.section
+                +e.box
+                    +block-container({
+                        title: 'Новости',
+                        headerLink: {name: 'Смотреть все', href: '/'}
+                    })
+                        +slider({
+                            type: 'entry',
+                            elements: [{},{},{},{},{}],
+                            carousel: {
+                                margin:20,
+                                nav:false,
+                                items:1,
+                                items1200:1
+                            }
+                        })
+            +b.promo._type_offer
+                .row
+                    .col-md-6.promo__col--mobile
+                        .promo__col
+                            .promo__container
+                                +e.header
+                                    | Закажите дизайн
+                                    br
+                                    | интерьера под ключ
+                                .row
+                                    .col-xs-6
+                                        +e.description  Помощь в подборке мебели и предметов интерьера.
+                                    .col-xs-6
+                                        +e.description  От интерьеров среднего уровня, до интерьеров класса LUXURY.
+                                +e.button
+                                    +b.A.button._type_primary(href="#")
+                                        +e.text ПОЛУЧИТЬ ПРЕДЛОЖЕНИЕ
+                    .col-md-6(style="background-image: url(/static/img/assets/promo/promo_type_offer.png)")
+            +b.promo._type_order.section(style="background-image: url(/static/img/assets/promo/promo_type_order.jpg)")
+                .section__box
+                    +e.content
+                        +e.header ИЩИТЕ ЛУЧШУЮ СТОИМОСТЬ?
+                        +e.description Напишите  нам название интересующего Вас товара. Сравните цены. Получите самое выгодное предложение
+                        +e.button
+                            +button({
+                                text: 'получить предложение',
+                                type: 'primary',
+                                link: '#'
+                            })
         +footer({})
 
         script(src='%=static=%js/separate-js/svg4everybody.min.js')

@@ -45,6 +45,13 @@
     &__bottom {
         display: flex;
         justify-content: flex-end;
+        padding: 20px 0 22px 0;
+        .button {
+            height: 30px;
+            font-size: 12px;
+            margin-right: 22px;
+            padding: 0 30px;
+        }
     }
 
     &__currency {
@@ -60,12 +67,15 @@
 
         &-text {
             margin-bottom: 0;
+            font-size: 10px;
+            margin-right: 8px;
         }
 
         &-item {
             position: relative;
             width: 25px;
             height: 22px;
+            margin-left: 6px;
             /*border-radius: 10px;
             border: 1px solid #353435;*/
 
@@ -129,6 +139,7 @@
     }
 
     &__close {
+        cursor: pointer;
         width: 20px;
         height: 20px;
         display: inline-block;
