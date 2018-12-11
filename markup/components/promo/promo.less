@@ -335,7 +335,23 @@
     }
 
     .read-more {
-        padding-top: 20px;
+        position: relative;
+        display: inline-block;
+        padding-top: 22px;
+        line-height: 1;
+        padding-right: 12px;
+        &:after {
+            content: '';
+            display: block;
+            position: absolute;
+            width: 0;
+            height: 0;
+            right: -11px;
+            bottom: -2px;
+            left: auto;
+            border: 5px solid transparent;
+            border-top-color: #000;
+        }
     }
 
     .more {

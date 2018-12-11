@@ -34,11 +34,61 @@ mixin slider(params)
                                     +e.item-view
                                         +e.item-add-image
                                             img(src='../static/img/assets/slider/add.jpg' alt='')
+                            +e.item_right
+                                img(src='../static/img/assets/slider/main.jpg' alt='')
+                                +e.item-box
+                                    +e.item-info
+                                        +e.item-logo
+                                            img(src='../static/img/assets/slider/logo.png' alt='')
+                                        +e.item-title Интерьеры италии
+                                        +e.item-description
+                                            | Кухни CESAR. Официальный
+                                            br
+                                            | диллер по России и странам СНГ
+                                        +e.item-btn
+                                            +button({text: 'Подробнее', theme: ''})
+                                    +e.item-view
+                                        +e.item-add-image
+                                            img(src='../static/img/assets/slider/add.jpg' alt='')
+                            +e.item_logo
+                                img(src='../static/img/assets/slider/main.jpg' alt='')
+                                +e.item-box
+                                    +e.item-info
+                                        +e.item-logo
+                                            img(src='../static/img/assets/slider/logo.png' alt='')
+                                        +e.item-title Интерьеры италии
+                                        +e.item-description
+                                            | Кухни CESAR. Официальный
+                                            br
+                                            | диллер по России и странам СНГ
+                                        +e.item-btn
+                                            +button({text: 'Подробнее', theme: ''})
+                                    +e.item-view
+                                        +e.item-add-image
+                                            img(src='../static/img/assets/slider/add.jpg' alt='')
                         when 'brand'
                             +brand-card()
                         when 'card-brand'
-                            +card({label_mod: 'yellow'})
+                            +card({
+                                label: 'Акция - 56%',
+                                label_mod: 'yellow',
+                                image: 'product.jpg',
+                                stars: true,
+                                code: 'Композиция: 133-072',
+                                name: 'Журнальные столики и пуфы коллекции Philipp фабрики Selva',
+                                price: 'от 234 567 ₽',
+                                availab: 'В наличии'
+                            })
                         when 'card'
-                            +card({label_mod: 'red'})
+                            +card({
+                                label: 'Акция - 56%',
+                                label_mod: 'red',
+                                image: 'product.jpg',
+                                stars: true,
+                                code: 'Композиция: 133-072',
+                                name: 'Журнальные столики и пуфы коллекции Philipp фабрики Selva',
+                                price: 'от 234 567 ₽',
+                                availab: 'В наличии'
+                            })
                         when 'entry'
                             +entry()
