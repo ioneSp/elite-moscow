@@ -1,9 +1,4 @@
 .entry {
-    .row {
-        margin-right: -5px;
-        margin-left: -5px;
-    }
-
     &__info {
         display: block;
         position: absolute;
@@ -13,11 +8,10 @@
         padding-left: 22px;
         transition: all .4s;
     }
-
     &__item {
-        width: 33.3333%;
+        display: block;
+        width: 100%;
         padding: 0 5px;
-
         &-box {
             border-radius: 4px;
             background: #ccc;
@@ -26,6 +20,7 @@
             display: block;
             cursor: pointer;
             margin-bottom: 10px;
+            overflow: hidden;
 
             &:before {
                 content: '';
