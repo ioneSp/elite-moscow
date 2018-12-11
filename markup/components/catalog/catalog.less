@@ -9,7 +9,7 @@
 
     &__filter {
         padding-top: 56px;
-        width: 100%;
+        width: auto;
         max-width: 240px;
         margin-right: 20px;
     }
@@ -25,16 +25,15 @@
         }
 
         &-cards {
-            display: flex;
-            justify-content: space-between;
-            flex-wrap: wrap;
             margin: 0 -10px 4px -10px;
-
+            margin-top: 0;
+            text-align: center;
             .card {
-                width: 33.3333%;
+                width: 32%;
                 max-width: 310px;
                 padding: 0 10px;
                 margin-bottom: 33px;
+                display: inline-block;
 
                 &__box {
                     background: #fff;
@@ -57,6 +56,8 @@
                     margin-top: -3px;
                     display: inline-block;
                     padding: 0 35px;
+                    max-height: 100px;
+                    overflow: hidden;
                 }
 
                 &__price {
@@ -198,8 +199,27 @@
         }
     }
 }
-
+.catalog__pagination .button.load-content{
+    background: #FFFFFF;
+    border: 1px solid rgba(67, 67, 67, 0.12);
+    box-sizing: border-box;
+    border-radius: 4px;
+    width: 137px;
+    height: 30px;
+    display: block;
+    margin: auto;
+}
+@media (min-width: 767px) {
+    .catalog__pagination .button.load-content{
+        display: none;
+    }
+}
 @media (max-width: 767px) {
+    .catalog__pagination{
+        .pagination{
+            display: none;
+        }
+    }
     .catalog {
         &__grid-filters {
             height: 56px;
@@ -214,7 +234,7 @@
         }
 
         .card {
-            width: 50%;
+            width: 48%;
         }
 
         &__grid-filter {
@@ -246,6 +266,15 @@
 }
 
 @media (max-width: 539px) {
+    .catalog__grid-filter_buttons{
+        width: 100%;
+        text-align: center;
+    }
+    .catalog__grid-filter_buttons .button{
+        display: inline-block;
+        width: 31%;
+        font-size: 10px;
+    }
     .catalog {
         width: 100%;
         max-width: 320px;
