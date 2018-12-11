@@ -1,15 +1,26 @@
 .header-bottom {
     background-color: #D5D0D2;
     min-height: 36px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
-
     .content.icon {
         line-height: 1;
+    }
+    &:after{
+        content: '';
+        display: inline-block;
+        vertical-align: middle;
+        height: 100%;
     }
 
     &__box {
         z-index: 9999!important;
+        display: inline-block;
+        vertical-align: middle;
         &:not(.fixed) {
             .ui.menu {
                 box-shadow: none;
