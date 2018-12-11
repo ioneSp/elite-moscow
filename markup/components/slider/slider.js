@@ -5,15 +5,20 @@ if (jQuery().owlCarousel) {
     }
 
     $('.slider__list_main').owlCarousel({
+        autoWidth: false,
         items: 1,
         loop: true,
         center: true,
         dots: true,
         nav: true,
-        autoWidth:true,
-        navText: ['','']
-        /*responsive: {
-            320: {
+        navText: ['',''],
+        responsive : {
+            1200: {
+                autoWidth: true,
+                stagePadding: 0,
+                margin: 0
+            }
+            /*320: {
                 margin: 350
             },
             768: {
@@ -36,8 +41,8 @@ if (jQuery().owlCarousel) {
             },
             1920: {
                 margin: 350
-            }
-        }*/
+            }*/
+        }
     });
 
     $("[data-carousel]").each(function (index, el) {
