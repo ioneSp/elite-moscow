@@ -4,6 +4,47 @@ if (jQuery().owlCarousel) {
         console.log('hooray!');
     }
 
+    $('.slider__list_main').owlCarousel({
+        autoWidth: false,
+        items: 1,
+        loop: true,
+        center: true,
+        dots: true,
+        nav: true,
+        navText: ['',''],
+        responsive : {
+            1200: {
+                autoWidth: true,
+                stagePadding: 0,
+                margin: 0
+            }
+            /*320: {
+                margin: 350
+            },
+            768: {
+                margin: 350
+            },
+            992: {
+                margin: 350
+            },
+            1024: {
+                margin: 350
+            },
+            1200: {
+                margin: 350
+            },
+            1280: {
+                margin: 350
+            },
+            1366: {
+                margin: 350
+            },
+            1920: {
+                margin: 350
+            }*/
+        }
+    });
+
     $("[data-carousel]").each(function (index, el) {
         var defaults = {
                 margin: 0,
