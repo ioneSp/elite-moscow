@@ -8,7 +8,7 @@ mixin footer(params)
                         +e.title ВАМ НУЖНА ПОМОЩЬ В ВЫБОРЕ?
                         +e.description.
                             Мы предлагаем Вам оставить заявку на нашем сайте, чтобы наш менеджер смог связаться с Вами и помочь решить все Ваши вопросы и тонкости выбора.
-                        +b.FORM.form_footer
+                        +b.FORM.form_footer(data-form)
                             +e.main
                                 +e.INPUT.input(name="name" val="" placeholder="Представьтесь пожалуйста")
                                 +e.INPUT.input(name="phone" val="" placeholder="Ваш номер телефона")
@@ -88,5 +88,5 @@ mixin footer(params)
                             +icon({mod: 'social-yt'})
                         +e.A.item(href="#" target="_blank")
                             +icon({mod: 'social-in'})
-    +b.cart.popup.ui.bottom.transition.hidden
-        +header-cart()
+        +b.cart.popup.ui
+            +header-cart()

@@ -29,7 +29,7 @@ module.exports = {
     },
     "sourcemaps": {
         "js": {
-            "active": false,
+            "active": true,
             "inline": true
         },
         "css": {

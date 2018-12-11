@@ -36,7 +36,7 @@ $(function () {
     function formInit() {
         $('.ui.checkbox').checkbox();
         $('[name=phone]').mask('+7 (999) 999-99-99');
-        $('form').each(function () {
+        $('[data-form]').each(function () {
             $(this).validate({
                 ignore: ".ignore",
                 focusInvalid: true,
@@ -82,7 +82,7 @@ $(function () {
                     data.append('url', location.href);
 
                     var url = '/.ajax/form.php';
-                    $.ajax({
+                    /*$.ajax({
                         url: url,
                         cache: false,
                         contentType: false,
@@ -92,7 +92,7 @@ $(function () {
                         dataType: 'json',
                         success: function (data) {},
                         error: function (data) {}
-                    });
+                    });*/
                 },
                 invalidHandler: function (form) {
 
