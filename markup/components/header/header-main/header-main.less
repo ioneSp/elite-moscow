@@ -41,15 +41,13 @@
 
         .header__icon {
             font-size: 30px;
-            color: #FCFCFB;
-
             &_search {
             }
 
             &_cart {
                 position: relative;
 
-                &-count {
+                &-count{
                     width: 24px;
                     height: 24px;
                     border-radius: 50%;
@@ -70,12 +68,84 @@
         position: relative;
         height: 90px;
         width: 140px;
-
+        transition: all .4s;
+        &:hover{
+            transform: translateY(-3px);
+        }
         img {
             position: absolute;
             top: 52%;
             left: 53%;
             transform: translate(-50%, -50%);
         }
+    }
+}
+@media (max-width: 1199px){
+    .header-main__box{
+        max-width: 998px !important;
+    }
+    .header-main__center {
+        padding: 0;
+        width: 35%;
+    }
+    .header-main__center .header__icon-box{
+        position: relative;
+        left: auto;
+    }
+    .header-main__center .header__icon-box{
+        margin-left: 17px;
+    }
+    .header-main__logo{
+        margin-left: 17px;
+    }
+}
+@media (max-width: 992px){
+    .header-main__center{
+        width: 45%;
+    }
+    .header-main__center .header__icon-box{
+        margin-left: 30px;
+    }
+    .header-main__logo {
+        margin-left: 30px;
+    }
+    .header-main__center .header__icon_cart-count{
+        width: 18px;
+        height: 18px;
+        font-size: 11px !important;
+        line-height: 18px;
+    }
+    .header-main__right{
+        text-align: right;
+    }
+    .header-bottom__box > .ui.menu > .item{
+        font-size: 11px;
+    }
+}
+@media (max-width: 778px){
+    .header-main__logo{
+        width: 90px;
+        display: block;
+        height: 90px;
+    }
+    .header-main__logo img{
+        width: 100px;
+    }
+    .header-main__box{
+        height: 100%;
+    }
+    .header-main__center .header__icon-name{
+        display: none;
+    }
+    .header-main__center .header__icon{
+        font-size: 20px;
+    }
+    .header-main{
+        height: 80px;
+    }
+}
+@media (max-width: 480px){
+    .header-main__center{
+        width: 90%;
     }
 }
