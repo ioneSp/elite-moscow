@@ -55,3 +55,29 @@
 .header__icon-box{
     color: #fff
 }
+.header-bottom__box .right{
+    display: none !important;
+}
+.header-bottom__box.fixed .right{
+    display: flex !important;
+}
+.header-bottom__box.fixed  > .ui.menu{
+    height: 36px;
+}
+.header__main{
+    position: relative;
+    z-index: 99999;
+}
+.header__bottom{
+    z-index: 9999;
+}
+
+
+@media (max-width: 768px){
+    .header__bottom{
+        display: none;
+    }
+    .header__icon_cart{
+        font-size: 20px !important;
+    }
+}
