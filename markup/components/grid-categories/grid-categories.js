@@ -1,6 +1,4 @@
-$('.block-container__navigation .button').tab({
+$('.block-container__navigation .button, .slider__navigation .slider__navigation-item').tab({
     context: $('.grid-categories')
 });
-$('.block-container__navigation .button').tab({
-    context: $('.grid-categories')
-});
+
