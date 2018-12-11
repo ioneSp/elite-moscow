@@ -18,34 +18,32 @@ if (jQuery().owlCarousel) {
                 stagePadding: 0,
                 margin: 0
             }
-        }
-    });
-
-    $('.slider__list_card').owlCarousel({
-        autoWidth: false,
-        items: 1,
-        padding: 75,
-        dots: true,
-        nav: true,
-        navText: ['',''],
-        responsive : {
-            320: {
-                items: 1,
-            },
-            640: {
-                items: 2,
+            /*320: {
+                margin: 350
             },
             768: {
-                items: 3,
+                margin: 350
+            },
+            992: {
+                margin: 350
             },
             1024: {
-                items: 4,
-                margin: 0
+                margin: 350
             },
+            1200: {
+                margin: 350
+            },
+            1280: {
+                margin: 350
+            },
+            1366: {
+                margin: 350
+            },
+            1920: {
+                margin: 350
+            }*/
         }
     });
-
-
 
     $("[data-carousel]").each(function (index, el) {
         var defaults = {
@@ -110,5 +108,8 @@ if (jQuery().owlCarousel) {
             $('.owl-item').eq(idx - 1).addClass('medium');
             $('.owl-item').eq(idx + 1).addClass('medium');
         });
+    });
+    $('.slider__navigation .slider__navigation-item').tab({
+        context: $('.grid-categories')
     });
 }
