@@ -1,5 +1,8 @@
 'use strict';
-$('.ui.dropdown').dropdown();
+$('.ui.dropdown').dropdown({
+    on:'hover',
+    allowCategorySelection: true
+});
 
 $('.header-bottom__box').sticky({
     context: '.main'
@@ -7,8 +10,15 @@ $('.header-bottom__box').sticky({
 
 $('.header-bottom .item.cart').popup({
     popup: $('.cart.popup'),
-    closable: false,
+    closable: true,
+    hideOnScroll: true,
+    position: 'right bottom',
+    lastResort: 'right bottom',
     on: 'click'
+});
+
+$(document).on('click', '.header-cart__close', function() {
+    $('.cart.popup').popup('hide');
 });
 
 $('.header-cart__close').popup({
@@ -16,6 +26,21 @@ $('.header-cart__close').popup({
     on: 'click'
 }).popup('hide');
 
+/*$('.header-cart__close').popup({
+    popup: $('.cart.popup'),
+    on: 'click',
+    onHide: function() {}
+});*/
+
+$('.header__phone .icon').popup({
+    popup: $('.phone.popup'),
+    target: $('.header-main'),
+    closable: true,
+    hideOnScroll: true,
+    position: 'right bottom',
+    lastResort: 'right bottom',
+    on: 'click'
+});
 
 $('.ui.search').search();
 

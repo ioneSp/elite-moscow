@@ -17,3 +17,11 @@ mixin header-top
                     a.right.item.lang.translate(href='#', data-lang='en') EN
                     a.item.lang.translate(href='#', data-lang='it') IT
                     a.item.translate.wt(href='#', data-lang='ru') RU
+                    .lang.ui.dropdown.scrolling
+                        input(type='hidden', name='lang')
+                        .default.text RU
+                        i.dropdown.icon
+                        .menu
+                            .item RU
+                            .item IT
+                            .item EN

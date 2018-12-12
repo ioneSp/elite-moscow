@@ -95,20 +95,28 @@
     }
 }
 @media (max-width: 768px){
-    .header__phone{
-        display: none;
-    }
-    .header-main{
-        height: 77px;
-    }
+
     .header-top__right .ui.secondary.menu .item:first-of-type{
         display: none;
     }
     .header-top__box .ui.secondary.menu .item{
         font-size: 11px;
     }
-    .header-top{
+    .header-top {
         height: 31px;
+        background: transparent;
+        .lang.ui.dropdown {
+            display: block;
+            .item {
+                display: block!important;
+                border: none!important;
+            }
+        }
+        &__left {
+            .menu.tiny .item {
+                border: none!important;
+            }
+        }
     }
 
 }

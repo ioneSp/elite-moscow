@@ -21,8 +21,10 @@
         z-index: 9999!important;
         display: inline-block;
         vertical-align: middle;
+
         &:not(.fixed) {
             .ui.menu {
+                position: relative;
                 box-shadow: none;
                 border-radius: 0;
                 background-color: #D5D0D2;
@@ -30,10 +32,12 @@
 
                 .item {
                     line-height: 20px;
-
                 }
-
+                & > .right {
+                    display: none !important;
+                }
                 & > .item {
+
                     &.active {
                         &:after {
                             top: 35px;
@@ -121,13 +125,14 @@
                         box-shadow: -1px -1px 0 0 rgba(34, 36, 38, 0.15);
                         background: #fff;
 
-                        top: 31px;
+                        top: 45px;
                         left: 50%;
                         margin-top: 0;
 
                         width: 9px;
                         height: 9px;
                         z-index: 99;
+                        transition: all 0.35s ease-in-out;
                     }
                 }
 
@@ -184,28 +189,44 @@
                                 border-radius: 0 4px 4px 0 !important;
 
                                 .grid {
+                                    width: calc(~"100% - 280px");
                                     flex-wrap: nowrap;
-                                    padding-top: 18px;
-                                    padding-bottom: 18px;
-                                    padding-left: 0;
+                                    padding: 10px 1.8% 18px;
                                     margin: 0 !important;
                                     box-sizing: border-box;
 
                                     .column {
                                         padding-top: 5px;
-                                        padding-left: 6%;
+                                        padding-left: 1.6%;
                                         padding-right: 2%;
-                                        min-width: 232px;
+                                        min-width: 228px;
 
                                         .header {
                                             margin-top: 0;
                                             font-size: 18px;
                                             font-weight: 400;
-                                            margin-bottom: 20px;
+                                            margin-bottom: 10px;
+                                            padding-left: 20px;
                                         }
 
                                         .item {
                                             height: 36px;
+                                            padding-left: 20px;
+                                            &:before {
+                                                position: relative;
+                                                content: '';
+                                                display: inline-block;
+                                                height: 100%;
+                                                width: 1px;
+                                                margin-left: -1px;
+                                                vertical-align: middle;
+                                            }
+                                            span {
+                                                vertical-align: middle;
+                                            }
+                                            &:hover {
+                                                background: #F9E7CB;
+                                            }
                                         }
                                     }
                                 }
@@ -235,6 +256,22 @@
         }
     }
 }
+
+
+//.header-bottom__box.fixed .right{
+//    display: flex !important;
+//}
+.header-bottom__box.fixed  > .ui.menu{
+    height: 36px;
+}
+.header__main{
+    position: relative;
+    z-index: 99999;
+}
+.header__bottom{
+    z-index: 9999;
+}
+
 
 #form_header {
     height: 26px;
@@ -322,23 +359,32 @@
     margin: 0;
 }
 
-@media (max-width: 992px){
-    .header__phone .icon{
-        top: 1px;
-        left: 7px;
-    }
-    .header__phone{
-        padding-left: 34px;
-    }
-    .header__phone-number{
-        font-size: 18px;
-        margin-bottom: 0;
-    }
-    .header__phone-description{
-        font-size: 11px;
+@media (max-width: 1199px){
+    .header-bottom {
+        &__box {
+            padding-left: 0;
+            padding-right: 0;
+            max-width: 100%;
+        }
     }
 }
-@media (max-width: 768px){
+@media (max-width: 1023px){
+    .header-bottom {
+        &__box {
+            &.fixed  > .ui.menu {
+                & > .item {
+                    display: none;
+                    &:nth-of-type(1),
+                    &:nth-of-type(2) {
+                        display: flex
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
     .header-bottom {
         background: transparent;
         &__box {
@@ -346,6 +392,42 @@
                 opacity: 0;
                 pointer-events: none;
             }
+            .ui.menu {
+                & > .item {
+                    display: none!important;
+                    &:first-of-type {
+                        display: flex!important;
+                        font-size: 0;
+                        padding-left: 7px;
+                        .dropdown.icon {
+                            display: none;
+                        }
+                    }
+                }
+                .right.menu .item:first-of-type {
+                    padding-left: 0;
+                    padding-right: 0;
+                }
+                .fixed-search__input {
+                    width: 185px;
+                }
+                .fixed-search {
+                    padding-right: 0;
+                }
+                .item.cart {
+                    font-size: 0!important;
+                    padding: 0 9px 0 6px!important;
+                    &:before {
+                        left: -2px!important;
+                    }
+                    .cart-count {
+                        font-size: 11px!important;
+                    }
+                }
+            }
         }
+    }
+    .fixed-search__input {
+        font-size: 11px;
     }
 }
