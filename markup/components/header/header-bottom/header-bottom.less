@@ -25,6 +25,16 @@
         padding-right: 0;
         &.fixed {
             top: 10px !important;
+            & > .ui.menu  .cart-count {
+                width: 16px;
+                height: 16px;
+                color: #fff;
+                background: #BFA96A;
+                border-radius: 50%;
+                text-align: center;
+                line-height: 16px;
+                font-size: 10px;
+            }
         }
         &:not(.fixed) {
             & > .ui.menu > .item {
@@ -209,7 +219,7 @@
                             }
 
                             .menu.level-last {
-                                width: auto;
+                                width: 300%;
                                 height: 100%;
                                 box-sizing: content-box;
                                 padding-left: 0;
@@ -217,9 +227,9 @@
                                 margin-top: -1px !important;
                                 margin-left: 0 !important;
                                 border-radius: 0 4px 4px 0 !important;
+                                overflow-y: auto;
 
                                 .grid {
-                                    flex-wrap: nowrap;
                                     padding: 10px 1.8% 18px;
                                     margin: 0 !important;
                                     box-sizing: border-box;

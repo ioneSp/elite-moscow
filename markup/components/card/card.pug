@@ -7,8 +7,8 @@ mixin card(params)
                 if('label_mod' in params && params.label_mod.length) classLabel += '_'+params.label_mod;
             if(params.label)
                 +e(class=classLabel)= params.label
-            +e.view
-                +e.IMG.image(src='static/img/assets/card/'+params.image alt="")
+            .card__view.c-ratio._ratio-10
+                .bg.contain(style='background-image: url("static/img/assets/card/'+params.image+'")')
                 if(params.stars)
                     +e.OL.stars
                         +e.LI.star_active
