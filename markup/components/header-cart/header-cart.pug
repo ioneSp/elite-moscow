@@ -2,8 +2,7 @@ include ../button/button
 mixin header-cart(params)
     +b.header-cart
         +e.header
-            +e.P.title Закрыть
-                +e.SPAN.close
+            +e.SPAN.close Закрыть
         +e.main
             +b.cart-card
                 +e.item_close
@@ -32,7 +31,7 @@ mixin header-cart(params)
                         +e.item-property Стоимость
                         +e.item-value по запросу
         +e.bottom
-            +button({text: 'Перейти к заказу', type: 'primary',mod: 'header-cart'})
+            +button({text: 'Перейти к заказу', type: 'primary', mod: 'header-cart'})
             +e.currency
                 +e.P.currency-text Отображать цены
                 +e.currency-list
