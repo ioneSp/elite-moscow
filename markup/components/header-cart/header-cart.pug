@@ -10,25 +10,27 @@ mixin header-cart(params)
                     +e.close
                 +e.item_image
                     img(src="/static/img/assets/header-cart/product.jpg" alt="")
-                +e.item_name Мягкая мебель Gordon
-                +e.item_code
-                    +e.item-property Коллекция
-                    +e.item-value 102-183
-                +e.item_price
-                    +e.item-property Стоимость
-                    +e.item-value по запросу
+                +e.item_info
+                    +e.item_name Мягкая мебель Gordon
+                    +e.item_code
+                        +e.item-property Коллекция
+                        +e.item-value 102-183
+                    +e.item_price
+                        +e.item-property Стоимость
+                        +e.item-value по запросу
             +b.cart-card
                 +e.item_close
                     +e.close
                 +e.item_image
                     img(src="/static/img/assets/header-cart/product.jpg" alt="")
-                +e.item_name Мягкая мебель Gordon
-                +e.item_code
-                    +e.item-property Коллекция
-                    +e.item-value 102-183
-                +e.item_price
-                    +e.item-property Стоимость
-                    +e.item-value по запросу
+                +e.item_info
+                    +e.item_name Мягкая мебель Gordon
+                    +e.item_code
+                        +e.item-property Коллекция
+                        +e.item-value 102-183
+                    +e.item_price
+                        +e.item-property Стоимость
+                        +e.item-value по запросу
         +e.bottom
             +button({text: 'Перейти к заказу', type: 'primary',mod: 'header-cart'})
             +e.currency

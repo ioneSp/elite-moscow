@@ -18,12 +18,13 @@ $('.header-bottom .item.cart').popup({
 });
 
 $('.header__icon-box_cart').popup({
-        popup: $('.cart.popup'),
-        hideOnScroll: true,
-        position: 'bottom center',
-        lastResort: 'bottom center',
-        on: 'manual'
-    });
+    popup: $('.cart.popup'),
+    hideOnScroll: true,
+    position: 'bottom center',
+    lastResort: 'bottom center',
+    on: 'manual'
+});
+
 $('.header-main__right .header__phone .icon').popup({
     popup: $('.phone.popup'),
     position: 'bottom right',
