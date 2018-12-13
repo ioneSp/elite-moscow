@@ -82,30 +82,27 @@ $(function () {
         });
 
         $('.slider__list_entry').owlCarousel({
-            autoWidth: true,
-            items: 3,
             dots: true,
             navText: ['',''],
             responsive : {
-                320: {
+                0: {
                     items: 1,
                     autoWidth: true,
                 },
                 640: {
-                    items: 3,
+                    items: 2,
                     autoWidth: true,
                 },
                 768: {
-                    items: 4,
+                    items: 3,
                     autoWidth: true,
                 },
                 1024: {
-                    items: 5,
+                    items: 3,
                     autoWidth: true,
                 },
                 1200: {
                     items: 3,
-                    autoWidth: false,
                 },
             }
         });

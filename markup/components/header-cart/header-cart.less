@@ -245,3 +245,18 @@
         width: 84px;
     }
 }
+
+@media (max-width: 767px) {
+    .header-cart {
+        width: auto;
+        &__bottom {
+            flex-direction: column;
+        }
+    }
+    .cart-card {
+        flex-direction: column;
+        &__code {
+            display: none;
+        }
+    }
+}

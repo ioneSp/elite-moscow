@@ -23,7 +23,15 @@
         vertical-align: middle;
         padding-left: 0;
         padding-right: 0;
+        &.fixed {
+            top: 10px !important;
+        }
         &:not(.fixed) {
+            & > .ui.menu > .item {
+                &:after {
+                    margin-top: -6px;
+                }
+            }
             .ui.menu {
                 position: relative;
                 box-shadow: none;
@@ -38,13 +46,6 @@
                     display: none !important;
                 }
                 & > .item {
-
-                    &.active {
-                        &:after {
-                            top: 35px;
-                            margin-top: 0;
-                        }
-                    }
 
                     & > .cart {
                         padding-right: 8px;
@@ -62,12 +63,14 @@
 
         // menu level 1
         .ui.menu {
+
             background: #DAD6D7;
             border: 2px solid #DAD6D7;
-            .item {
+            transition: top 0.25s ease-in-out;
+            & > .item {
+                position: relative;
                 padding-top: 0;
                 padding-bottom: 0;
-
                 .cart-count {
                     width: 16px;
                     height: 16px;
@@ -85,7 +88,29 @@
 
             min-height: 0;
             // item level 1
-
+            & > .item {
+                z-index: 1;
+                &:after {
+                    content: '';
+                    display: block;
+                    position: absolute;
+                    top: 0;
+                    left: 1%;
+                    width: 97%;
+                    height: 32px;
+                    background: #F9E7CB!important;
+                    opacity: 0;
+                    transition: opacity 0.1s ease-in-out;
+                    z-index: -1;
+                    border-radius: 2px;
+                }
+                &:hover {
+                    &:after {
+                        opacity: 1;
+                        transition: opacity 0.1s ease-in-out;
+                    }
+                }
+            }
             & > .item,
             & > .right.menu .item {
                 text-transform: uppercase;
@@ -113,28 +138,11 @@
                     background: #BFA96A;
                 }
 
+                &:after {
+                    transition: all 0s ease 0.45s;
+                }
                 &.active {
-                    &:after {
-                        display: block;
-                        position: absolute;
-                        pointer-events: none;
-                        content: '';
-                        visibility: visible;
-                        -webkit-transform: rotate(45deg);
-                        transform: rotate(45deg);
-                        -webkit-box-shadow: -1px -1px 0 0 rgba(34, 36, 38, 0.15);
-                        box-shadow: -1px -1px 0 0 rgba(34, 36, 38, 0.15);
-                        background: #fff;
 
-                        top: 45px;
-                        left: 50%;
-                        margin-top: 0;
-
-                        width: 9px;
-                        height: 9px;
-                        z-index: 99;
-                        transition: all 0.35s ease-in-out;
-                    }
                 }
 
                 &.dropdown {
@@ -146,6 +154,27 @@
                         background: #FFFFFF;
                         box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
                         border-radius: 4px 0 0 4px;
+
+                        &:before {
+                            display: block;
+                            position: absolute;
+                            pointer-events: none;
+                            content: '';
+                            visibility: visible;
+                            -webkit-transform: rotate(45deg);
+                            transform: rotate(45deg);
+                            -webkit-box-shadow: -1px -1px 0 0 rgba(34, 36, 38, 0.15);
+                            box-shadow: -1px -1px 0 0 rgba(34, 36, 38, 0.15);
+                            background: #fff;
+
+                            top: -5px;
+                            left: 14px;
+                            margin-top: 0;
+
+                            width: 9px;
+                            height: 9px;
+                            z-index: 99;
+                        }
 
                         &:after {
                             margin-top: -1px;
