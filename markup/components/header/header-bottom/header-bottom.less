@@ -21,7 +21,8 @@
         z-index: 9999!important;
         display: inline-block;
         vertical-align: middle;
-
+        padding-left: 0;
+        padding-right: 0;
         &:not(.fixed) {
             .ui.menu {
                 position: relative;
@@ -189,7 +190,6 @@
                                 border-radius: 0 4px 4px 0 !important;
 
                                 .grid {
-                                    width: calc(~"100% - 280px");
                                     flex-wrap: nowrap;
                                     padding: 10px 1.8% 18px;
                                     margin: 0 !important;
@@ -199,7 +199,7 @@
                                         padding-top: 5px;
                                         padding-left: 1.6%;
                                         padding-right: 2%;
-                                        min-width: 228px;
+                                        width: 228px;
 
                                         .header {
                                             margin-top: 0;
@@ -384,7 +384,7 @@
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
     .header-bottom {
         background: transparent;
         &__box {

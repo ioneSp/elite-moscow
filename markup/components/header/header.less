@@ -33,7 +33,9 @@
     &__icon {
         &-box {
             text-align: center;
-            color: #c0aa70;
+            &:hover {
+                color: #c0aa70!important;
+            }
         }
 
         &-name {
@@ -88,7 +90,7 @@
     color: #fff
 }
 
-@media (max-width: 992px){
+@media (max-width: 1023px){
     .header {
         &__phone .icon {
             top: 1px;
@@ -107,25 +109,19 @@
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
     .header {
-        &__phone{
+        &__phone {
             display: none;
         }
-        &__bottom{
-            position: absolute;
+        &__bottom {
+            margin-top: -36px;
             top: 100%;
             left: 0;
             width: 100%;
         }
-        &__icon_cart{
+        &__icon_cart {
             font-size: 20px !important;
         }
-    }
-}
-
-@media (max-width: 768px) {
-    .header {
-
     }
 }
