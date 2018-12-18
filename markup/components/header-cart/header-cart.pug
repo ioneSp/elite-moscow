@@ -7,10 +7,10 @@ mixin header-cart(params)
             +b.cart-card
                 +e.item_close
                     +e.close
-                +e.item_image
+                +e.A.item_image(href="#")
                     img(src="/static/img/assets/header-cart/product.jpg" alt="")
                 +e.item_info
-                    +e.item_name Мягкая мебель Gordon
+                    +e.A.item_name.link(href="#") Мягкая мебель Gordon
                     +e.item_code
                         +e.item-property Коллекция
                         +e.item-value 102-183
@@ -20,10 +20,10 @@ mixin header-cart(params)
             +b.cart-card
                 +e.item_close
                     +e.close
-                +e.item_image
+                +e.A.item_image(href="#")
                     img(src="/static/img/assets/header-cart/product.jpg" alt="")
                 +e.item_info
-                    +e.item_name Мягкая мебель Gordon
+                    +e.A.item_name.link(href="#") Мягкая мебель Gordon
                     +e.item_code
                         +e.item-property Коллекция
                         +e.item-value 102-183
