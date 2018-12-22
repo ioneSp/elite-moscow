@@ -4,7 +4,7 @@ mixin header-top
             +e.left
                 .ui.secondary.tiny.menu
                     a.item.text.fs-14(href='/')
-                        +icon({semantic: 'home'})
+                        != pugHelpers.Icon.call(locals, {iconName: 'home'})
                     a.item(href='#') О компании
                     a.item(href='#') Доставка и оплата
                     a.item(href='#') Статьи
@@ -12,7 +12,7 @@ mixin header-top
             +e.right
                 .ui.secondary.tiny.menu
                     a.right.item.translate(href='#', data-lang='en')
-                        +icon({semantic: 'user'})
+                        != pugHelpers.Icon.call(locals, {iconName: 'user'})
                         | Личный кабинет
                     a.right.item.lang.translate(href='#', data-lang='en') EN
                     a.item.lang.translate(href='#', data-lang='it') IT

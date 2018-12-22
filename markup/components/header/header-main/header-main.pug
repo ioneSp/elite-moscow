@@ -5,7 +5,7 @@ mixin header-main
                 +b.header__mobile-menu
                     +icon({semantic: 'bars'})
                 +b.header__phone
-                    +icon({semantic: 'phone'})
+                    != pugHelpers.Icon.call(locals, {iconName: 'phone'})
                     +e.phone-number
                         | 8 (495)
                         strong  783-97-33
@@ -14,19 +14,19 @@ mixin header-main
                 +b.A.header__icon-box_search(href='')
                     +e.SPAN.icon-name Поиск
                     +e.icon_search
-                        +icon({semantic: 'search'})
+                        != pugHelpers.Icon.call(locals, {iconName: 'search'})
                 +e.A.logo(href="/")
                     img(src="static/img/assets/header/header-main/logo.svg")
                 +b.A.header__icon-box_cart(href='')
                     +e.SPAN.icon-name Корзина
                     +e.main--basket
                         +e.icon_cart
-                            +icon({semantic: 'cart'})
+                            != pugHelpers.Icon.call(locals, {iconName: 'cart'})
                         +e.icon_cart-count 3
             +e.right
                 +b.header__phone
-                    +icon({semantic: 'phone'})
+                    != pugHelpers.Icon.call(locals, {iconName: 'phone'})
                     +e.phone-number
-                        | 8 (495)
-                        strong  783-97-33
+                        | 8 (800)
+                        strong  550-78-77
                     +e.phone-description Бесплатный звонок по РФ

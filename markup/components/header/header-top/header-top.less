@@ -1,5 +1,5 @@
 .header-top {
-    height: 36px;
+    height: 35px;
     .ui.menu{
         min-height: auto;
         .item {
@@ -31,6 +31,9 @@
                 padding-left: 2px;
                 padding-right: 27px;
                 line-height: 1;
+                .icon__home {
+                    margin-top: -2px;
+                }
             }
 
             &:last-of-type {
@@ -62,8 +65,15 @@
     &__right {
         .ui.secondary.menu .item {
             &:first-of-type {
-                padding-right: 16px;
+                position: relative;
+                padding-right: 18px;
+                padding-left: 23px;
                 border-right: none;
+                .icon__user {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                }
                 .icon {
                     padding-right: 20px;
                     font-size: 10px;
